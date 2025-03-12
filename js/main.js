@@ -1,3 +1,15 @@
+// Fixed menue
+window.addEventListener("scroll", function () {
+  let fixedNav = document.querySelector(".top-bar");
+  let scrollPosition = window.scrollY;
+
+  if (scrollPosition > 100) {
+      fixedNav.style.display = "flex";
+  } else {
+      fixedNav.style.display = "none";
+  }
+});
+
 //  our service slider animation ---------------------
 document.addEventListener("DOMContentLoaded", function () {
     new Swiper(".mySwiper" , {

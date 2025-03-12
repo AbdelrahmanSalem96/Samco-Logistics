@@ -143,6 +143,40 @@ body {
   line-height: 1.7;
 }
 
+.whatsbut {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+}
+
+.whatsbut2 {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  left: 40px;
+  background-color: $color-secondary;
+  color: $color-primary;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+}
+
+.my-whatsbut {
+  margin-top: 16px;
+}
+
 // Nav
 .navigation {
   border-top: 6px solid $color-primary;
@@ -211,6 +245,84 @@ body {
       transform: translateX(1rem);
     }
   }
+}
+
+/* Top Bar Styles */
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba($color-black, .8); /* Dark background */
+  color: $color-white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 50px;
+  font-size: 14px;
+  z-index: 100000000000;
+
+  .top-bar__info {
+      display: flex;
+      justify-content: space-around;
+      gap: 20px;
+      font-size: $default-font-size;
+
+      span{
+        color: $color-tertiary;
+        
+        i {
+            color: $color-primary; /* Icon color */
+            margin-right: 5px;
+          }
+
+          strong{
+            color: $color-white;
+          }
+      }
+
+      a {
+          color: $color-white;
+          text-decoration: none;
+
+          &:hover {
+              color: $color-primary;
+          }
+      }
+  }
+
+  .top-bar__contact {
+    background-color: $color-secondary;  // Orange background
+    color: $color-primary;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    
+    & i{
+        margin-right: 10px;
+        font-size: 20px;
+    }
+
+    & span{
+      margin-right: 5px;
+    }
+
+    & strong{
+      &:hover{
+        color: $color-white;
+      }
+
+      a{
+        text-decoration: none;
+        color: inherit;
+      }  
+    }
+    
+  }
+
 }
 
 // header

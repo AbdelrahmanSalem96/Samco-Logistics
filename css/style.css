@@ -124,6 +124,37 @@ body {
   font-weight: 400;
   line-height: 1.7; }
 
+.whatsbut {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100; }
+
+.whatsbut2 {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  left: 40px;
+  background-color: #4d494a;
+  color: #e06d2f;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100; }
+
+.my-whatsbut {
+  margin-top: 16px; }
+
 .navigation {
   border-top: 6px solid #e06d2f;
   background-color: #4d494a;
@@ -166,6 +197,59 @@ body {
     background-position: 100%;
     color: #e06d2f;
     transform: translateX(1rem); }
+
+/* Top Bar Styles */
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  /* Dark background */
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 50px;
+  font-size: 14px;
+  z-index: 100000000000; }
+  .top-bar .top-bar__info {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    font-size: 1.6rem; }
+    .top-bar .top-bar__info span {
+      color: #b9b9b9; }
+      .top-bar .top-bar__info span i {
+        color: #e06d2f;
+        /* Icon color */
+        margin-right: 5px; }
+      .top-bar .top-bar__info span strong {
+        color: #fff; }
+    .top-bar .top-bar__info a {
+      color: #fff;
+      text-decoration: none; }
+      .top-bar .top-bar__info a:hover {
+        color: #e06d2f; }
+  .top-bar .top-bar__contact {
+    background-color: #4d494a;
+    color: #e06d2f;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold; }
+    .top-bar .top-bar__contact i {
+      margin-right: 10px;
+      font-size: 20px; }
+    .top-bar .top-bar__contact span {
+      margin-right: 5px; }
+    .top-bar .top-bar__contact strong:hover {
+      color: #fff; }
+    .top-bar .top-bar__contact strong a {
+      text-decoration: none;
+      color: inherit; }
 
 .header {
   height: 95vh; }

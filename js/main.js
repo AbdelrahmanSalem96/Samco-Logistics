@@ -78,11 +78,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   new Swiper(".testimonial-slider", {
-    slidesPerView: 2,
-    spaceBetween: 0,
+    slidesPerView: 3,
+    spaceBetween: 10,
     loop: true,
     autoplay: {
-      delay: 4000,
+      delay: 400000000,
       disableOnInteraction: false,
     },
     navigation: {
@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     breakpoints: {
       0: { slidesPerView: 1 },
-      768: { slidesPerView: 2 },
+      768: { slidesPerView: 3 },
     },
   });
 });

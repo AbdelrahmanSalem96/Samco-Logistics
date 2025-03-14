@@ -793,50 +793,47 @@ textarea {
 /* Testimonial Section */
 .testimonial-section {
   background: white;
-  height: 90vh;
+  height: 100vh;
   position: relative;
-}
-
-/* Container */
-.testimonial-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.testimonial-image {
-  height: 100%;
-  width: 45%;
-}
-
-.testimonial-image img {
-  width: 80%;
-  border-radius: 5px;
-  margin: 10rem;
 }
 
 /* Right Side Content */
 .testimonial-content {
-  width: 55%;
-  height: 90vh;
+  text-align: center;
   h2 {
     font-size: $default-font-size;
     color: $color-secondary;
   }
 }
 
+/* Container */
+.testimonial-container {
+  position: relative;
+  
+  .testimonial-image {
+    width: 50%;
+  
+    img {
+      width: 80%;
+      border-radius: 5px;
+      margin: 4rem 9rem;
+    }
+  }
+
+}
+
+
 /* Swiper Slider */
 .testimonial-slider {
-  width: 60%;
-  position: relative;
+  width: 75%;
   position: absolute !important;
-  left: 30%;
+  left: 20%;
   top: 35%;
 
   .swiper-slide {
-    width: 40% !important;
-    padding: 2rem;
-    margin: 2rem 4rem;
+    width: 28% !important;
+    padding: 2%;
+    margin: 1rem 4rem;
   }
 
   .swiper-button-next,
@@ -849,7 +846,7 @@ textarea {
 /* Testimonial Cards */
 .testimonial-card {
   background: $color-white;
-  min-height: 210px;
+  min-height: 230px;
   padding: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -898,11 +895,7 @@ textarea {
   color: $color-secondary;
 }
 
-/* Swiper Navigation Buttons */
-.swiper-button-prev,
-.swiper-button-next {
-  color: $color-primary !important;
-}
+
 
 // Portofolio -------------
 

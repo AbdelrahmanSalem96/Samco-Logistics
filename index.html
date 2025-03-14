@@ -18,32 +18,81 @@
 <body>
     <!--    Navbar     -->
 
-    <div class="navigation">
+    <!-- <div class="navigation">
         <div class="navigation__logo-box">
             <img src="img/logo.png" alt="logo" class="navigation__logo--img">
             <h1 class="navigation__logo--name">SAMCO</h1>
         </div>
-        <ul class="navigation__list col-2-of-3">
+
+        <div class="navigation__toggle" id="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul id="nav-menu" class="navigation__list col-2-of-3">
             <li class="navigation__item"><a href="#header" class="navigation__link">Home</a></li>
             <li class="navigation__item"><a href="#about" class="navigation__link">About us</a></li>
             <li class="navigation__item"><a href="#services" class="navigation__link">Services</a></li>
             <li class="navigation__item"><a href="#quote" class="navigation__link">Contact us</a></li>
             <li class="navigation__item"><a href="#portfolio" class="navigation__link">Portfolio</a></li>
         </ul>
+    </div> -->
+
+    <!-- after -->
+
+    <div class="navigation">
+        <div class="navigation__logo-box">
+            <img src="img/logo.png" alt="logo" class="navigation__logo--img">
+            <h1 class="navigation__logo--name" data-key="logo" id="nav-logo">SAMCO</h1>
+        </div>
+        <!-- Hamburger Menu Icon -->
+        <div class="navigation__toggle" id="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul id="nav-menu" class="navigation__list col-2-of-3">
+            <li class="navigation__item"><a href="#header" class="navigation__link" data-key="home">Home</a></li>
+            <li class="navigation__item"><a href="#about" class="navigation__link" data-key="aboutUs">About us</a></li>
+            <li class="navigation__item"><a href="#services" class="navigation__link" data-key="services">Services</a></li>
+            <li class="navigation__item"><a href="#quote" class="navigation__link" data-key="contactUs">Contact us</a></li>
+            <li class="navigation__item"><a href="#portfolio" class="navigation__link" data-key="portfolio">Portfolio</a></li>
+        </ul>
     </div>
+    
 
     <!-- Fixed Top Bar -->
     <div class="top-bar">
-        <div class="top-bar__info">
-            <span><i class="fa fa-clock"></i> Work Time: <strong>Mon - Fri 09: am - 06 pm</strong></span>
-            <span><i class="fa fa-envelope"></i> Email Us: <a href="mailto:info@samco-ksa.com">info@samco-ksa.com</a></span>
+        <!-- <div class="top-bar__info">
+            <span data-key="workTime"><i class="fa fa-clock"></i> Work Time: <strong>Mon - Fri 09: am - 06 pm</strong></span>
+            <span data-key="emailUs"><i class="fa fa-envelope"></i> Email Us: <a href="mailto:info@samco-ksa.com">info@samco-ksa.com</a></span>
         </div>
         <div class="top-bar__contact">
             <i class="fa fa-phone"></i>
-            <span>Phone :</span>
+            <span data-key="phone">Phone :</span>
             <strong> <a href="tel:507513164">+966 50 751 3164</a></strong>
+        </div> -->
+
+        <!-- after -->
+        <div class="top-bar__info">
+            <span><i class="fa fa-clock"></i> <span data-key="workTime">Work Time: <strong>Mon - Fri 09:00 AM - 06:00 PM</strong></span></span>
+            <span><i class="fa fa-envelope"></i> <span data-key="emailUs">Email Us:</span> <a href="mailto:info@samco-ksa.com">info@samco-ksa.com</a></span>
+        </div>
+        <div class="top-bar__contact">
+            <i class="fa fa-phone"></i>
+            <span data-key="phone">Phone :</span>
+            <strong><a href="tel:507513164" data-key="phoneNumber">+966 50 751 3164</a></strong>
+        </div>
+
+        <!-- Language Switch Button -->
+        <div class="top-bar__lang">
+            <button class="lang-btn" id="langToggle" onclick="toggleLanguage()"></button>
         </div>
     </div>
+
+    
+
 
     <!-- fixed buttons -->
     <a href="https://wa.me/+966507513164?text=hello from website" class="whatsbut" target="_blank">
@@ -53,10 +102,10 @@
     <a href="tel:507513164" class="whatsbut2">
         <i class="fa fa-phone my-whatsbut"></i>
     </a>
-    
+
 
     <!-- Header -->
-    <header id="header" class="header">
+    <!-- <header id="header" class="header">
         <div class="header__bg-video">
             <video class="header__bg-video__content" autoplay loop muted>
                 <source src="./img/background-video.mov" type="video/mp4">
@@ -70,12 +119,30 @@
             </h1>
             <a href="#footer" class="btn btn--black btn--animated">Contact Us</a>
         </div>
+    </header> -->
+
+    <!-- After  -->
+
+    <header id="header" class="header">
+        <div class="header__bg-video">
+            <video class="header__bg-video__content" autoplay loop muted>
+                <source src="./img/background-video.mov" type="video/mp4">
+                <span data-key="videoNotSupported">Your browser is not supported!</span>
+            </video>
+        </div>
+        <div class="header__text-box">
+            <h1 class="heading-primary">
+                <span class="heading-primary--main" data-key="warehouseServices">Warehouse services</span>
+                <span class="heading-primary--sub" data-key="samcoFullName">Safety Achievement Medical Co. (SAMCO)</span>
+            </h1>
+            <a href="#footer" class="btn btn--black btn--animated" data-key="contactUs">Contact Us</a>
+        </div>
     </header>
 
     <main>
 
         <!-- Section ABOUT US -->
-        <section id="about" class="section-about">
+        <!-- <section id="about" class="section-about">
             <div class="u-center-text u-margin-bottom-mediam">
                 <h2 class="heading-secondary">
                     About Us
@@ -141,10 +208,73 @@
                     </div>
                 </div>
             </div>
+        </section> -->
+
+        <!-- After -->
+
+        <section id="about" class="section-about">
+            <div class="u-center-text u-margin-bottom-mediam">
+                <h2 class="heading-secondary" data-key="aboutUsTitle">About Us</h2>
+            </div>
+            <div class="row">
+                <div class="col-1-of-2">
+                    <h3 class="heading-tertialry u-margin-bottom-small" data-key="aboutUsHeading">
+                        World-Class Warehouse Services to Support Your Business Growth!
+                    </h3>
+                    <p class="paragraph u-margin-bottom-small" data-key="aboutUsDescription">
+                        Welcome to SAMCO, the one-stop solution for all your warehouse storage requirements. At SAMCO, we have a wealth of 
+                        experience in providing excellent warehouse services to ensure that your products are stored safely and securely. 
+                        From storage to distribution, we handle every aspect of your supply chain management operations. As one of the leading 
+                        warehousing companies in Saudi Arabia.
+                    </p>
+                    <div class="more-about">
+                        <a href="#" class="btn-text u-margin-bottom-mediam" data-key="learnMore">Learn More &rarr;</a>
+                        <div class="signature">
+                            <img src="./img/about-thumb_1.png" alt="profile-image" class="profile__img">
+                            <img src="./img/signature.png" alt="signature-image" class="signature__img">
+                        </div>
+                    </div>
+        
+                    <div class="u-margin-top-small">
+                        <div class="story">
+                            <figure class="story__shape">
+                                <img src="./img/about_1_1.svg" alt="story-image" class="story__img">
+                            </figure>
+                            <div class="story__text u-margin-bottom-mediam">
+                                <h3 class="heading-tertialry" data-key="potentialToGrow">Potential to Grow</h3>
+                                <p data-key="potentialToGrowDesc">To cater to different business needs.</p>
+                            </div>
+                        </div>
+        
+                        <div class="story">
+                            <figure class="story__shape">
+                                <img src="./img/about_1_2.svg" alt="story-image" class="story__img">
+                            </figure>
+                            <div class="story__text">
+                                <h3 class="heading-tertialry" data-key="digitalTools">Professionals with Digital Tools</h3>
+                                <p data-key="digitalToolsDesc">With SAMCO's Digital transformation and with experts.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-1-of-2">
+                    <div class="composition">
+                        <div class="d-flex">
+                            <img src="img/delivery-man3.jpg" alt="Image 1" class="composition__photo composition__photo--p1">
+                            <div class="d-grid">
+                                <img src="img/background-3.jpeg" alt="Image 2" class="composition__photo composition__photo--p2">
+                                <img src="img/background-2.jpeg" alt="Image 3" class="composition__photo composition__photo--p3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
+        
 
         <!-- Section OUR SERVICE -->
-        <section id="services" class="section-services">
+        <!-- <section id="services" class="section-services">
             <div class="u-center-text u-margin-bottom-small u-margin-top-mediam">
                 <h1 class="heading-secondary">Our services</h1>
                 <p class="heading-secondary-sub">Specialist logistics services</p>
@@ -224,7 +354,7 @@
                     </div>
                 </div>
 
-                <!-- Pagination & Navigation -->
+                
                 <div class="swiper-pagination"></div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
@@ -233,185 +363,260 @@
 
 
 
+        </section> -->
+
+        <!-- services ----------  After -->
+        <section id="services" class="section-services">
+            <div class="u-center-text u-margin-bottom-small u-margin-top-mediam">
+                <h1 class="heading-secondary" data-key="servicesTitle">Our services</h1>
+                <p class="heading-secondary-sub" data-key="servicesSubtitle">Specialist logistics services</p>
+            </div>
+        
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper u-margin-bottom-big u-margin-top-small">
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="./img/our-service-1.jpg" alt="ISO">
+                            <div class="content">
+                                <h3 data-key="isoTitle">ISO Certificates</h3>
+                                <p data-key="isoDescription">International Organization for Standardization (ISO).</p>
+                                <a href="#" data-key="readMore">READ MORE →</a>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="./img/our-service-3.jpg" alt="SFDA">
+                            <div class="content">
+                                <h3 data-key="sfdaTitle">SFDA Certificates</h3>
+                                <p data-key="sfdaDescription">For importing food, pharmaceuticals, medical devices,</p>
+                                <a href="#" data-key="readMore">READ MORE →</a>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="./img/our-service-5.jpg" alt="Warehousing">
+                            <div class="content">
+                                <h3 data-key="warehousingTitle">Warehousing</h3>
+                                <p data-key="warehousingDescription">18-25 C Temperature Controlled (Cosmetic-Medical Devices-Food).</p>
+                                <a href="#" data-key="readMore">READ MORE →</a>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="./img/our-service-2.png" alt="eCommerce">
+                            <div class="content">
+                                <h3 data-key="ecommerceTitle">eCommerce Fulfillment</h3>
+                                <p data-key="ecommerceDescription">3PL Services Pick to Ship Flexible pricing.</p>
+                                <a href="#" data-key="readMore">READ MORE →</a>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="./img/our-service-4.png" alt="SFDA">
+                            <div class="content">
+                                <h3 data-key="sfdaReqTitle">SFDA Requirements</h3>
+                                <p data-key="sfdaReqDescription">Specific product or process, such as pharmaceutical registration</p>
+                                <a href="#" data-key="readMore">READ MORE →</a>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="./img/our-service-6.jpg" alt="Custom">
+                            <div class="content">
+                                <h3 data-key="customClearanceTitle">Custom Clearance</h3>
+                                <p data-key="customClearanceDescription">For importing food, pharmaceuticals, medical devices,</p>
+                                <a href="#" data-key="readMore">READ MORE →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Pagination & Navigation -->
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
         </section>
 
+        
         <!-- Section Qoute -->
         <section id="quote" class="quote-section">
-
             <div class="row">
                 <!-- Right Form -->
                 <div class="col-1-of-2 .u-center-text">
                     <div class="quote-text">
-                        <h1 class="heading-secondary u-margin-bottom-small">REQUEST A QUOTE</h1>
-                        <h2 class="heading-tertialry">We Create Opportunity to Reach Potential</h2>
+                        <h1 class="heading-secondary u-margin-bottom-small" data-key="requestQuote">REQUEST A QUOTE</h1>
+                        <h2 class="heading-tertialry" data-key="quoteSubtitle">We Create Opportunity to Reach Potential</h2>
                     </div>
                 </div>
-
+        
                 <!-- Left Content -->
                 <div class="col-1-of-2 text-content"></div>
             </div>
-
+        
             <div class="tab-container">
                 <!-- Tabs -->
                 <div class="tab-menu">
-                    <button class="tab-btn active" data-tab="quote">Request a Quote</button>
-                    <button class="tab-btn" data-tab="tracking">Real Time Tracking</button>
-                    <button class="tab-btn" data-tab="support">24/7 Hours Support</button>
+                    <button class="tab-btn active" data-tab="quote" data-key="tabQuote">Request a Quote</button>
+                    <button class="tab-btn" data-tab="tracking" data-key="tabTracking">Real Time Tracking</button>
+                    <button class="tab-btn" data-tab="support" data-key="tabSupport">24/7 Hours Support</button>
                 </div>
-
+        
                 <!-- Tab Content -->
                 <div class="tab-content">
                     <!-- Quote Form -->
                     <div id="quote" class="tab-panel active">
                         <div class="quote-group">
                             <div class="input-group">
-                                <input type="text" placeholder="Full Name">
+                                <input type="text" placeholder="Full Name" data-key="placeholderFullName">
                                 <span class="icon">👤</span>
                             </div>
                             <div class="input-group">
-                                <input type="email" placeholder="Your Email">
+                                <input type="email" placeholder="Your Email" data-key="placeholderEmail">
                                 <span class="icon">✉️</span>
                             </div>
                         </div>
                         <div class="quote-group">
                             <div class="input-group">
-                                <input type="text" placeholder="Weight, Kg">
+                                <input type="text" placeholder="Weight, Kg" data-key="placeholderWeight">
                                 <span class="icon">⚖️</span>
                             </div>
                             <div class="input-group">
-                                <input type="text" placeholder="Distance, Km">
+                                <input type="text" placeholder="Distance, Km" data-key="placeholderDistance">
                                 <span class="icon">📍</span>
                             </div>
                         </div>
-
+        
                         <select class="select">
-                            <option>select option</option>
-                            <option>Select Freight 1</option>
-                            <option>Select Freight 2</option>
-                            <option>Select Freight 3</option>
-                            <option>Select Freight 4</option>
+                            <option value="" data-key="selectOptionDefault">Select Option</option>
+                            <option data-key="selectFreight1">Select Freight 1</option>
+                            <option data-key="selectFreight2">Select Freight 2</option>
+                            <option data-key="selectFreight3">Select Freight 3</option>
+                            <option data-key="selectFreight4">Select Freight 4</option>
                         </select>
-                        <button class="submit-btn">FREE QUOTE! 🚀</button>
+                        <button class="submit-btn" data-key="freeQuote">FREE QUOTE! 🚀</button>
                     </div>
-
+        
                     <!-- Tracking Form -->
                     <div id="tracking" class="tab-panel">
-                        <select class="select">
-                            <option>select option</option>
-                            <option>Shipment Type 1</option>
-                            <option>Shipment Type 2</option>
-                            <option>Shipment Type 3</option>
+                        <select class="select" data-key="selectShipment">
+                            <option value="" data-key="selectShipmentDefault">Select Option</option>
+                            <option data-key="shipmentType1">Shipment Type 1</option>
+                            <option data-key="shipmentType2">Shipment Type 2</option>
+                            <option data-key="shipmentType3">Shipment Type 3</option>
                         </select>
-                        <textarea placeholder="Tracking Number"></textarea>
-                        <button class="submit-btn">FREE QUOTE! 🚀</button>
+                        <textarea placeholder="Tracking Number" data-key="placeholderTracking"></textarea>
+                        <button class="submit-btn" data-key="freeQuote">FREE QUOTE! 🚀</button>
                     </div>
-
+        
                     <!-- Support Form -->
                     <div id="support" class="tab-panel">
                         <div class="input-group">
-                            <input type="text" placeholder="Full Name">
+                            <input type="text" placeholder="Full Name" data-key="placeholderFullName">
                             <span class="icon">👤</span>
                         </div>
                         <div class="input-group">
-                            <input type="email" placeholder="Your Email">
+                            <input type="email" placeholder="Your Email" data-key="placeholderEmail">
                             <span class="icon">✉️</span>
                         </div>
-                        <textarea placeholder="Type your message"></textarea>
-                        <button class="submit-btn">FREE QUOTE! 🚀</button>
+                        <textarea placeholder="Type your message" data-key="placeholderMessage"></textarea>
+                        <button class="submit-btn" data-key="freeQuote">FREE QUOTE! 🚀</button>
                     </div>
                 </div>
             </div>
         </section>
+        
 
         <!-- Section Testimonial -->
 
         <section class="testimonial-section">
             <div class="testimonial-container">
-                <!-- Left Image -->
                 <div class="testimonial-image">
                     <img src="./img/testi_img.jpg" alt="Workers">
                 </div>
-
-                <!-- Right Content -->
+        
                 <div class="testimonial-content">
-                    <span class="heading-secondary">TESTIMONIAL</span>
-                    <h2>Message from <br> President</h2>
-
-                    <!-- Swiper Slider -->
+                    <span class="heading-secondary" data-key="testimonial">TESTIMONIAL</span>
+                    <h2 data-key="messageFromPresident">Message from <br> President</h2>
+        
                     <div class="swiper testimonial-slider">
                         <div class="swiper-wrapper">
-                            <!-- Card 1 -->
                             <div class="swiper-slide testimonial-card">
-                                <h4>Good Services <span class="stars">★★★★★</span></h4>
-                                <p>“Good services typically meet or exceed customer expectations.”</p>
+                                <h4 data-key="goodServices">Good Services <span class="stars">★★★★★</span></h4>
+                                <p data-key="goodServicesDesc">“Good services typically meet or exceed customer expectations.”</p>
                                 <div class="testimonial-user">
                                     <img src="./img/testi_1_2.png" alt="Dianne Russell">
                                     <div class="user-info">
-                                        <h5>Dianne Russell</h5>
-                                        <span>Web Designer</span>
+                                        <h5 data-key="testimonialUser1">Dianne Russell</h5>
+                                        <span data-key="testimonialRole1">Web Designer</span>
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- Card 2 -->
+        
                             <div class="swiper-slide testimonial-card">
-                                <h4>Good Services <span class="stars">★★★★★</span></h4>
-                                <p>“Collecting feedback from clients is critical for success.”</p>
+                                <h4 data-key="goodServices">Good Services <span class="stars">★★★★★</span></h4>
+                                <p data-key="feedbackDesc">“Collecting feedback from clients is critical for success.”</p>
                                 <div class="testimonial-user">
                                     <img src="./img/testi_1_2.webp" alt="Darlene Robertson">
                                     <div class="user-info">
-                                        <h5>Jac Robertson</h5>
-                                        <span>Founder Of CEO</span>
+                                        <h5 data-key="testimonialUser2">Jac Robertson</h5>
+                                        <span data-key="testimonialRole2">Founder Of CEO</span>
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- Card 3 -->
+        
                             <div class="swiper-slide testimonial-card">
-                                <h4>Good Services <span class="stars">★★★★★</span></h4>
-                                <p>“We strive to move our business along with the clients.”</p>
+                                <h4 data-key="goodServices">Good Services <span class="stars">★★★★★</span></h4>
+                                <p data-key="businessGrowthDesc">“We strive to move our business along with the clients.”</p>
                                 <div class="testimonial-user">
                                     <img src="./img/testi_1_4.webp" alt="Eng. Amer Takem">
                                     <div class="user-info">
-                                        <h5>Eng. Amer Takem</h5>
-                                        <span>Sincerely</span>
+                                        <h5 data-key="testimonialUser3">Eng. Amer Takem</h5>
+                                        <span data-key="testimonialRole3">Web Developer</span>
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- Card 4 -->
+        
                             <div class="swiper-slide testimonial-card">
-                                <h4>Excellent Support <span class="stars">★★★★★</span></h4>
-                                <p>“The support team is responsive and helpful, making sure every issue is solved.”</p>
+                                <h4 data-key="excellentSupport">Excellent Support <span class="stars">★★★★★</span></h4>
+                                <p data-key="supportDesc">“The support team is responsive and helpful, making sure every issue is solved.”</p>
                                 <div class="testimonial-user">
                                     <img src="./img/testi_1_3.webp" alt="Alice Cooper">
                                     <div class="user-info">
-                                        <h5>Alice Cooper</h5>
-                                        <span>Product Manager</span>
+                                        <h5 data-key="testimonialUser4">Alice Cooper</h5>
+                                        <span data-key="testimonialRole4">Product Manager</span>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
-
-                        <!-- Swiper Navigation -->
+        
                         <div class="swiper-button-next"></div>
                         <div class="swiper-button-prev"></div>
-
+        
                     </div>
                 </div>
             </div>
         </section>
+        
 
 
         <!-- Portofolio Section -->
         <section id="portfolio" class="portfolio">
-
             <div class="portfolio__heading u-center-text">
-                <h2 class="heading-secondary u-margin-top-small">portfolio</h2>
-                <h3 class="u-margin-bottom-mediam">Our Recent Work Showcase</h3>
+                <h2 class="heading-secondary u-margin-top-small" data-key="portfolioTitle">Portfolio</h2>
+                <h3 class="u-margin-bottom-mediam" data-key="ourRecentWork">Our Recent Work Showcase</h3>
             </div>
-
+        
             <div class="swiper portfolio-slider">
                 <div class="swiper-wrapper">
                     <!-- Card 1 -->
@@ -420,54 +625,54 @@
                             <img src="./img/project_1_1.webp" alt="">
                         </div>
                         <div class="portfolio__card--info">
-                            <h5>truck Freight</h5>
-                            <span>Packaging & Distribution</span>
+                            <h5 data-key="truckFreight">Truck Freight</h5>
+                            <span data-key="packagingDistribution">Packaging & Distribution</span>
                         </div>
                     </div>
-
+        
                     <!-- Card 2 -->
                     <div class="swiper-slide portfolio__card">
                         <div class="portfolio__card--img">
                             <img src="./img/project_1_2.webp" alt="">
                         </div>
                         <div class="portfolio__card--info">
-                            <h5>Air freight</h5>
-                            <span>Transport for Product</span>
+                            <h5 data-key="airFreight">Air Freight</h5>
+                            <span data-key="transportForProduct">Transport for Product</span>
                         </div>
                     </div>
-
+        
                     <!-- Card 3 -->
                     <div class="swiper-slide portfolio__card">
                         <div class="portfolio__card--img">
                             <img src="./img/project_1_3.webp" alt="">
                         </div>
                         <div class="portfolio__card--info">
-                            <h5>Packaging</h5>
-                            <span>Effective packaging</span>
+                            <h5 data-key="packaging">Packaging</h5>
+                            <span data-key="effectivePackaging">Effective Packaging</span>
                         </div>
                     </div>
-
+        
                     <!-- Card 4 -->
                     <div class="swiper-slide portfolio__card">
                         <div class="portfolio__card--img">
                             <img src="./img/project_1_4.webp" alt="">
                         </div>
                         <div class="portfolio__card--info">
-                            <h5>Ocean Freight</h5>
-                            <span>Distribution Processing</span>
+                            <h5 data-key="oceanFreight">Ocean Freight</h5>
+                            <span data-key="distributionProcessing">Distribution Processing</span>
                         </div>
                     </div>
-
+        
                 </div>
-
             </div>
         </section>
-
+        
+        <!-- Working Process -->
         <section class="working-process">
             <div class="container">
                 <div class="section-title">
-                    <span class="subtitle heading-secondary">WORKING PROCESS</span>
-                    <h2>Working Process for services</h2>
+                    <span class="subtitle heading-secondary" data-key="workingProcess">WORKING PROCESS</span>
+                    <h2 data-key="workingProcessServices">Working Process for services</h2>
                 </div>
                 <div class="process-wrapper">
                     <div class="process-step">
@@ -475,48 +680,56 @@
                             <span class="step-number">01</span>
                             <img src="./img/process_1_1.svg" alt="Online Quote">
                         </div>
-                        <h3>Online Quote</h3>
-                        <p>An online quote is an estimate of the cost of a product or service provided by a business.
+                        <h3 data-key="onlineQuote">Online Quote</h3>
+                        <p data-key="onlineQuoteDetails">
+                            An online quote is an estimate of the cost of a product or service provided by a business.
                         </p>
                     </div>
-
+        
                     <div class="process-step">
                         <div class="icon-container">
                             <span class="step-number">02</span>
                             <img src="./img/process_1_2.svg" alt="Picking Product">
                         </div>
-                        <h3>Picking Product</h3>
-                        <p>Picking a product refers to selecting a specific item from a range of products.</p>
+                        <h3 data-key="pickingProduct">Picking Product</h3>
+                        <p data-key="pickingProductDetails">
+                            Picking a product refers to selecting a specific item from a range of products.
+                        </p>
                     </div>
-
+        
                     <div class="process-step">
                         <div class="icon-container">
                             <span class="step-number">03</span>
                             <img src="./img/process_1_3.svg" alt="Product Packaging">
                         </div>
-                        <h3>Product Packaging</h3>
-                        <p>Product packaging refers to the materials and design used to protect products for customers.
+                        <h3 data-key="productPackaging">Product Packaging</h3>
+                        <p data-key="productPackagingDetails">
+                            Product packaging refers to the materials and design used to protect products for customers.
                         </p>
                     </div>
-
+        
                     <div class="process-step">
                         <div class="icon-container">
                             <span class="step-number">04</span>
                             <img src="./img/process_1_4.svg" alt="Product Transport">
                         </div>
-                        <h3>Product Transport</h3>
-                        <p>Product transport refers to moving products from one location to another.</p>
+                        <h3 data-key="productTransport">Product Transport</h3>
+                        <p data-key="productTransportDetails">
+                            Product transport refers to moving products from one location to another.
+                        </p>
                     </div>
                 </div>
+            </div>
         </section>
+        
 
         <!-- Section EXPERIENCE TEAM -->
         <section class="section-team">
             <div class="u-center-text u-margin-top-mediam">
-                <h1 class="heading-secondary">EXPERIENCE TEAM</h1>
-                <p class="heading-secondary-sub">Meet Our Amazing Team</p>
+                <h1 class="heading-secondary" data-key="team_title">EXPERIENCE TEAM</h1>
+                <p class="heading-secondary-sub" data-key="team_subtitle">Meet Our Amazing Team</p>
             </div>
-
+        
             <div class="swiper team-swiper">
                 <div class="swiper-wrapper u-margin-bottom-small">
                     <!-- Slide 1 -->
@@ -524,117 +737,116 @@
                         <div class="card">
                             <img src="./img/team_1_1.webp" alt="Jacob Jones">
                             <div class="content">
-                                <h3>Jacob Jones</h3>
-                                <p>Jr. Manager</p>
+                                <h3 data-key="team_member_1_name">Jacob Jones</h3>
+                                <p data-key="team_member_1_position">Jr. Manager</p>
                             </div>
                         </div>
                     </div>
-
+        
                     <!-- Slide 2 -->
                     <div class="swiper-slide">
                         <div class="card">
                             <img src="./img/team_1_2.webp" alt="Jade Smith">
                             <div class="content">
-                                <h3>Jade Smith</h3>
-                                <p>Sr. Manager</p>
+                                <h3 data-key="team_member_2_name">Jade Smith</h3>
+                                <p data-key="team_member_2_position">Sr. Manager</p>
                             </div>
                         </div>
                     </div>
-
+        
                     <!-- Slide 3 -->
                     <div class="swiper-slide">
                         <div class="card">
-                            <img src="./img/team_1_3.webp" alt="Ronald Richards">
+                            <img src="./img/team_1_3.webp" alt="Sara Smith">
                             <div class="content">
-                                <h3>Sara Smith</h3>
-                                <p>Sr. Manager</p>
+                                <h3 data-key="team_member_3_name">Sara Smith</h3>
+                                <p data-key="team_member_3_position">Sr. Manager</p>
                             </div>
                         </div>
                     </div>
-
+        
                     <!-- Slide 4 -->
                     <div class="swiper-slide">
                         <div class="card">
                             <img src="./img/team_1_4.webp" alt="Marvin McKinne">
                             <div class="content">
-                                <h3>Marvin McKinne</h3>
-                                <p>Sr. Manager</p>
+                                <h3 data-key="team_member_4_name">Marvin McKinne</h3>
+                                <p data-key="team_member_4_position">Sr. Manager</p>
                             </div>
                         </div>
                     </div>
-
+        
                     <!-- Slide 5 -->
                     <div class="swiper-slide">
                         <div class="card">
                             <img src="./img/team_1_5.webp" alt="Ronald Richards">
                             <div class="content">
-                                <h3>Ronald Richards</h3>
-                                <p>Sr. Manager</p>
+                                <h3 data-key="team_member_5_name">Ronald Richards</h3>
+                                <p data-key="team_member_5_position">Sr. Manager</p>
                             </div>
                         </div>
                     </div>
-
                 </div>
-
+        
                 <!-- Pagination & Navigation -->
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
-
             </div>
-
         </section>
+        
 
         <!-- Hero -->
         <section class="section-numbers">
             <div class="hero">
                 <div class="hero-content">
-                    <h1>24/7 customer support any time of the day or night</h1>
+                    <h1 data-key="support_text">24/7 customer support any time of the day or night</h1>
                     <div class="hero-buttons">
-                        <a href="#" class="btn btn-orange">FREE QUOTE! 🚀</a>
-                        <a href="#" class="btn btn-blue">CONTACT US →</a>
+                        <a href="#" class="btn btn-orange" data-key="free_quote">FREE QUOTE! 🚀</a>
+                        <a href="#" class="btn btn-blue" data-key="contact_us">CONTACT US →</a>
                     </div>
                 </div>
             </div>
-
+        
             <div class="stats">
                 <div class="stats-container">
                     <div class="stat">
                         <img src="./img/shipping.svg" alt="Clients">
-                        <h2>15k</h2>
-                        <p>Worldwide Clients</p>
+                        <h2 data-key="clients_count">15k</h2>
+                        <p data-key="clients_text">Worldwide Clients</p>
                     </div>
                     <div class="divider"></div>
                     <div class="stat">
                         <img src="./img/location.svg" alt="Branches">
-                        <h2>189+</h2>
-                        <p>Worldwide Branches</p>
+                        <h2 data-key="branches_count">189+</h2>
+                        <p data-key="branches_text">Worldwide Branches</p>
                     </div>
                     <div class="divider"></div>
                     <div class="stat">
                         <img src="./img/users.svg" alt="Staff">
-                        <h2>950+</h2>
-                        <p>Expert Company Staffs</p>
+                        <h2 data-key="staff_count">950+</h2>
+                        <p data-key="staff_text">Expert Company Staffs</p>
                     </div>
                     <div class="divider"></div>
                     <div class="stat">
                         <img src="./img/delivery-time.svg" alt="Delivery">
-                        <h2>15k</h2>
-                        <p>Successful Delivery</p>
+                        <h2 data-key="delivery_count">15k</h2>
+                        <p data-key="delivery_text">Successful Delivery</p>
                     </div>
                 </div>
             </div>
         </section>
+        
 
         <!-- News section -->
         <section class="blog-section">
             <div class="blog-header">
                 <div class="category">
-                    <span>📌 BLOG & NEWS</span>
-                    <h2>Latest Blog & News</h2>
+                    <span data-key="blog_label">📌 BLOG & NEWS</span>
+                    <h2 data-key="blog_title">Latest Blog & News</h2>
                 </div>
-                <a href="#" class="btn-orange">VIEW ALL POSTS →</a>
+                <a href="#" class="btn-orange" data-key="view_all_posts">VIEW ALL POSTS →</a>
             </div>
-
+        
             <div class="blog-carousel">
                 <div class="swiper blog-swiper">
                     <div class="swiper-wrapper">
@@ -642,82 +854,81 @@
                         <div class="swiper-slide">
                             <div class="blog-card">
                                 <img src="./img/blog-s-1-2.jpg" alt="Blog Image">
-                                <div class="date-badge">11 Apr</div>
+                                <div class="date-badge" data-key="date_1">11 Apr</div>
                                 <div class="card-content">
                                     <div class="meta">
-                                        <span>👤 By-6bqn7</span>
-                                        <span>💬 Comments(3)</span>
+                                        <span data-key="author_1">👤 By-6bqn7</span>
+                                        <span data-key="comments_1">💬 Comments(3)</span>
                                     </div>
-                                    <h3>The perfect logistics partner for your business</h3>
-                                    <a href="#" class="read-more">READ MORE →</a>
+                                    <h3 data-key="blog_1_title">The perfect logistics partner for your business</h3>
+                                    <a href="#" class="read-more" data-key="read_more">READ MORE →</a>
                                 </div>
                             </div>
                         </div>
-
+        
                         <!-- Slide 2 -->
                         <div class="swiper-slide">
                             <div class="blog-card">
                                 <img src="./img/blog-s-1-3.jpg" alt="Blog Image">
-                                <div class="date-badge">11 Apr</div>
+                                <div class="date-badge" data-key="date_2">11 Apr</div>
                                 <div class="card-content">
                                     <div class="meta">
-                                        <span>👤 By-6bqn7</span>
-                                        <span>💬 Comments(3)</span>
+                                        <span data-key="author_2">👤 By-6bqn7</span>
+                                        <span data-key="comments_2">💬 Comments(3)</span>
                                     </div>
-                                    <h3>Moving your products across all borders.</h3>
-                                    <a href="#" class="read-more">READ MORE →</a>
+                                    <h3 data-key="blog_2_title">Moving your products across all borders.</h3>
+                                    <a href="#" class="read-more" data-key="read_more">READ MORE →</a>
                                 </div>
                             </div>
                         </div>
-
+        
                         <!-- Slide 3 -->
                         <div class="swiper-slide">
                             <div class="blog-card">
                                 <img src="./img/blog-s-1-2.jpg" alt="Blog Image">
-                                <div class="date-badge">11 Apr</div>
+                                <div class="date-badge" data-key="date_3">11 Apr</div>
                                 <div class="card-content">
                                     <div class="meta">
-                                        <span>👤 By-6bqn7</span>
-                                        <span>💬 Comments(3)</span>
+                                        <span data-key="author_3">👤 By-6bqn7</span>
+                                        <span data-key="comments_3">💬 Comments(3)</span>
                                     </div>
-                                    <h3>Future Is Bright When You Are More Prepared</h3>
-                                    <a href="#" class="read-more">READ MORE →</a>
+                                    <h3 data-key="blog_3_title">Future Is Bright When You Are More Prepared</h3>
+                                    <a href="#" class="read-more" data-key="read_more">READ MORE →</a>
                                 </div>
                             </div>
                         </div>
-
+        
                         <!-- Slide 4 -->
                         <div class="swiper-slide">
                             <div class="blog-card">
                                 <img src="./img/blog-s-1-4.jpg" alt="Blog Image">
-                                <div class="date-badge">11 Apr</div>
+                                <div class="date-badge" data-key="date_4">11 Apr</div>
                                 <div class="card-content">
                                     <div class="meta">
-                                        <span>👤 By-6bqn7</span>
-                                        <span>💬 Comments(3)</span>
+                                        <span data-key="author_4">👤 By-6bqn7</span>
+                                        <span data-key="comments_4">💬 Comments(3)</span>
                                     </div>
-                                    <h3>Don't get stuck with the rest, truck with us!</h3>
-                                    <a href="#" class="read-more">READ MORE →</a>
+                                    <h3 data-key="blog_4_title">Don't get stuck with the rest, truck with us!</h3>
+                                    <a href="#" class="read-more" data-key="read_more">READ MORE →</a>
                                 </div>
                             </div>
                         </div>
-
+        
                     </div>
-
+        
                     <!-- Pagination & Navigation -->
                     <div class="swiper-pagination"></div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                 </div>
-
             </div>
         </section>
-
+        
         <!-- Partener Section -->
         <section class="partener-section">
             <div class="section-title">
-                <span class="heading-secondary">Partners</span>
-                <h2>Our Partners</h2>
+                <span class="heading-secondary" data-key="partners">Partners</span>
+                <h2 data-key="ourPartners">Our Partners</h2>
             </div>
 
             <div class="partners-slider">
@@ -772,26 +983,29 @@
         </section>
 
     </main>
+    
     <section id="footer" class="footer">
         <!-- Newsletter Section -->
         <div class="newsletter">
             <div class="newsletter-header">
-                <h2>Subscribe Our Newsletter</h2>
-                <h2>Get update</h2>
+                <h2 data-key="newsletter_subscribe">Subscribe Our Newsletter</h2>
+                <h2 data-key="newsletter_update">Get update</h2>
             </div>
             <div class="newsletter-input">
-                <input type="email" placeholder="Enter Your Email">
-                <button class="subscribe-btn">
+                <input type="email" placeholder="Enter Your Email" data-key="newsletter_placeholder">
+                <button class="subscribe-btn" data-key="subscribe_button">
                     Subscribe <i class="fa fa-paper-plane"></i>
                 </button>
             </div>
         </div>
-
+    
         <div class="footer-content">
             <!-- Company Info -->
             <div class="footer-column">
                 <img src="./img/logo.png" alt="Company Logo" class="footer-logo">
-                <p>Pellentesque non dolor vitae lacus fringilla consequat vel quis enim.</p>
+                <p data-key="company_description">
+                    Pellentesque non dolor vitae lacus fringilla consequat vel quis enim.
+                </p>
                 <div class="social-icons">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
@@ -799,41 +1013,43 @@
                     <a href="#"><i class="fa-brands fa-behance"></i></a>
                 </div>
             </div>
-
+    
             <!-- Office Address -->
             <div class="footer-column">
-                <h3>Office Address</h3>
-                <p>7304 Sulay District, Riyadh, Saudi Arabia</p>
-                <p>Mon-Fri: 09.00 am-05.00 pm</p>
-                <p>+966 50 751 3164</p>
-                <p>info@samco-ksa.com</p>
+                <h3 data-key="office_address">Office Address</h3>
+                <p data-key="office_location">7304 Sulay District, Riyadh, Saudi Arabia</p>
+                <p data-key="office_hours">Mon-Fri: 09.00 am-05.00 pm</p>
+                <p data-key="office_phone">+966 50 751 3164</p>
+                <p data-key="office_email">info@samco-ksa.com</p>
             </div>
-
+    
             <!-- Explore Links -->
             <div class="footer-column">
-                <h3>Explore</h3>
+                <h3 data-key="explore_title">Explore</h3>
                 <ul>
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#quote">Quote Rquest</a></li>
+                    <li><a href="#header" data-key="explore_home">Home</a></li>
+                    <li><a href="#about" data-key="explore_about">About Us</a></li>
+                    <li><a href="#services" data-key="explore_services">Services</a></li>
+                    <li><a href="#quote" data-key="explore_quote">Quote Request</a></li>
                 </ul>
             </div>
-
+    
             <!-- Photo Gallery -->
             <div class="footer-column">
-                <h3>Photos Gallery</h3>
+                <h3 data-key="photo_gallery">Photos Gallery</h3>
                 <div class="photo-gallery">
-                    <img src="./img/background-2.jpeg" alt="Gallery Image">
-                    <img src="./img/background-1.jpeg" alt="Gallery Image">
-                    <img src="./img/background-3.jpeg" alt="Gallery Image">
-                    <img src="./img/background-4.jpeg" alt="Gallery Image">
-                    <img src="./img/our-service-5.jpg" alt="Gallery Image">
-                    <img src="./img/background-5.png" alt="Gallery Image">
+                    <img src="./img/background-2.jpeg" alt="Gallery Image" data-key="gallery_image_1">
+                    <img src="./img/background-1.jpeg" alt="Gallery Image" data-key="gallery_image_2">
+                    <img src="./img/background-3.jpeg" alt="Gallery Image" data-key="gallery_image_3">
+                    <img src="./img/background-4.jpeg" alt="Gallery Image" data-key="gallery_image_4">
+                    <img src="./img/our-service-5.jpg" alt="Gallery Image" data-key="gallery_image_5">
+                    <img src="./img/background-5.png" alt="Gallery Image" data-key="gallery_image_6">
                 </div>
             </div>
         </div>
     </section>
+    
+    
     <footer>
         <div class="footer-bottom">
             <p>All Rights Reserved © Designed by <span class="highlight">3b_d0 Salem</span></p>
@@ -845,7 +1061,7 @@
         </div>
     </footer>
 
-
+    <script src="./js/lang.js"></script>
     <script src="./js/main.js"></script>
 </body>
 

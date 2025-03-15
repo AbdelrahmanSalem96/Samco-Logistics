@@ -798,6 +798,7 @@ textarea {
         .section-team .swiper .swiper-slide .card img {
           width: 100%;
           height: 100%;
+          object-fit: cover;
           margin-bottom: -5px; }
         .section-team .swiper .swiper-slide .card .content {
           padding: 15px; }

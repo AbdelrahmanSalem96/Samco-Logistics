@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   new Swiper(".testimonial-slider", {
     slidesPerView: 3,
-    spaceBetween: 10,
+    spaceBetween: 0,
     loop: true,
     autoplay: {
       delay: 400000000,

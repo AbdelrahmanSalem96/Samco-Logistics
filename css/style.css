@@ -597,10 +597,13 @@ textarea {
   position: absolute !important;
   left: 20%;
   top: 35%; }
+  .testimonial-slider .swiper-wrapper {
+    width: 99% !important;
+    padding: 17px !important; }
   .testimonial-slider .swiper-slide {
-    width: 28% !important;
-    padding: 2%;
-    margin: 1rem 4rem; }
+    width: 30% !important;
+    padding: 3rem;
+    margin: 1rem 1.5rem; }
   .testimonial-slider .swiper-button-next,
   .testimonial-slider .swiper-button-prev {
     color: #e06d2f !important;
@@ -609,7 +612,7 @@ textarea {
 /* Testimonial Cards */
 .testimonial-card {
   background: #fff;
-  min-height: 230px;
+  min-height: 250px;
   padding: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px; }
@@ -624,6 +627,7 @@ textarea {
   margin-left: 10px; }
 
 .testimonial-card p {
+  height: 80px;
   font-size: 14px;
   color: #4d494a;
   margin-bottom: 20px; }

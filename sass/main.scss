@@ -830,10 +830,15 @@ textarea {
   left: 20%;
   top: 35%;
 
+  .swiper-wrapper{
+    width: 99% !important;
+    padding: 17px !important;
+  }
+
   .swiper-slide {
-    width: 28% !important;
-    padding: 2%;
-    margin: 1rem 4rem;
+    width: 30% !important;
+    padding: 3rem;
+    margin: 1rem 1.5rem;
   }
 
   .swiper-button-next,
@@ -846,7 +851,7 @@ textarea {
 /* Testimonial Cards */
 .testimonial-card {
   background: $color-white;
-  min-height: 230px;
+  min-height: 250px;
   padding: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -864,6 +869,7 @@ textarea {
 }
 
 .testimonial-card p {
+  height: 80px;
   font-size: 14px;
   color: $color-secondary;
   margin-bottom: 20px;

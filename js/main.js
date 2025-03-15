@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
     spaceBetween: 0,
     loop: true,
     autoplay: {
-      delay: 400000000,
+      delay: 4000,
       disableOnInteraction: false,
     },
     navigation: {
@@ -94,8 +94,15 @@ document.addEventListener("DOMContentLoaded", function () {
       clickable: true,
     },
     breakpoints: {
-      0: { slidesPerView: 1 },
-      768: { slidesPerView: 3 },
+      1024: {
+        slidesPerView: 3, // Keep 3 slides on desktops
+      },
+      768: {
+        slidesPerView: 2, // Reduce to 2 slides for tablets
+      },
+      480: {
+        slidesPerView: 1, // Show 1 slide on mobile
+      },
     },
   });
 });

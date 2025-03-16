@@ -7,7 +7,7 @@ const translations = {
     contactUs: "Contact us",
     portfolio: "Portfolio",
     workTime: "Work Time: Mon - Fri 09:00 AM - 06:00 PM",
-    emailUs: "Email Us: info@samco-ksa.com",
+    emailUs: "Email Us:",
     phone: "Phone:",
     phoneNumber: "+966 50 751 3164",
     langButton: "EN",

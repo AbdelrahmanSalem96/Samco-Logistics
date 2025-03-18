@@ -48,6 +48,23 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// toggle read
+function toggleReadMore() {
+  const dots = document.getElementById("dots");
+  const moreText = document.getElementById("more");
+  const btnText = document.getElementById("readMoreBtn");
+
+  if (moreText.style.display === "none") {
+    moreText.style.display = "inline";
+    dots.style.display = "none";
+    btnText.textContent = "Read Less";
+  } else {
+    moreText.style.display = "none";
+    dots.style.display = "inline";
+    btnText.textContent = "Read More";
+  }
+}
+
 //  our service slider animation ---------------------
 document.addEventListener("DOMContentLoaded", function () {
   new Swiper(".mySwiper", {
@@ -67,9 +84,21 @@ document.addEventListener("DOMContentLoaded", function () {
       disableOnInteraction: false,
     },
     breakpoints: {
-      1024: { slidesPerView: 3 }, // Desktop: 3 slides
-      768: { slidesPerView: 2 }, // Tablet: 2 slides
-      480: { slidesPerView: 1 }, // Mobile: 1 slide
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+      }, // Desktop: 3 slides
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+      }, // Tablet: 2 slides
+      480: {
+        slidesPerView: 1,
+        spaceBetween: 50,
+      },
+      0: {
+        slidesPerView: 1,
+      }, // Mobile: 1 slide
     },
   });
 });
@@ -78,13 +107,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   new Swiper(".testimonial-slider", {
-    slidesPerView: 3,
-    spaceBetween: 0,
-    loop: true,
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: false,
-    },
+    slidesPerView: 3, // Show 3 slides at a time
+    spaceBetween: 30, // Space between slides
+    loop: true, // Enable infinite loop
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -93,21 +118,31 @@ document.addEventListener("DOMContentLoaded", function () {
       el: ".swiper-pagination",
       clickable: true,
     },
+    autoplay: {
+      delay: 4000000, // Auto-slide every 3 seconds
+      disableOnInteraction: false,
+    },
     breakpoints: {
       1024: {
-        slidesPerView: 3, // Keep 3 slides on desktops
-      },
+        slidesPerView: 3,
+        spaceBetween: 50,
+      }, // Desktop: 3 slides
       768: {
-        slidesPerView: 2, // Reduce to 2 slides for tablets
-      },
+        slidesPerView: 2,
+        spaceBetween: 40,
+      }, // Tablet: 2 slides
       480: {
-        slidesPerView: 1, // Show 1 slide on mobile
+        slidesPerView: 1,
+        spaceBetween: 50,
       },
+      0: {
+        slidesPerView: 1,
+      }, // Mobile: 1 slide
     },
   });
 });
 
-//  slider animation ---------------------
+//  portfolio-slider ---------------------
 document.addEventListener("DOMContentLoaded", function () {
   new Swiper(".portfolio-slider", {
     slidesPerView: 3, // Show 3 slides at a time
@@ -126,60 +161,69 @@ document.addEventListener("DOMContentLoaded", function () {
       disableOnInteraction: false,
     },
     breakpoints: {
-      1024: { slidesPerView: 3 }, // Desktop: 3 slides
-      768: { slidesPerView: 2 }, // Tablet: 2 slides
-      480: { slidesPerView: 1 }, // Mobile: 1 slide
+      1024: {
+        slidesPerView: 3,
+      }, // Desktop: 3 slides
+      768: {
+        slidesPerView: 2,
+      }, // Tablet: 2 slides
+      480: {
+        slidesPerView: 1,
+      },
+      0: {
+        slidesPerView: 1,
+      }, // Mobile: 1 slide
     },
   });
 });
 
 // team slider
 //  slider animation ---------------------
-document.addEventListener("DOMContentLoaded", function () {
-  new Swiper(".team-swiper", {
-    slidesPerView: 4, // Show 3 slides at a time
-    spaceBetween: 45, // Space between slides
-    loop: true, // Enable infinite loop
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    autoplay: {
-      delay: 40000000, // Auto-slide every 3 seconds
-      disableOnInteraction: false,
-    },
-    breakpoints: {
-      1024: { slidesPerView: 4 }, // Desktop: 3 slides
-      768: { slidesPerView: 2 }, // Tablet: 2 slides
-      480: { slidesPerView: 1 }, // Mobile: 1 slide
-    },
-  });
-});
+// document.addEventListener("DOMContentLoaded", function () {
+//   new Swiper(".team-swiper", {
+//     slidesPerView: 4, // Show 3 slides at a time
+//     spaceBetween: 45, // Space between slides
+//     loop: true, // Enable infinite loop
+//     navigation: {
+//       nextEl: ".swiper-button-next",
+//       prevEl: ".swiper-button-prev",
+//     },
+//     pagination: {
+//       el: ".swiper-pagination",
+//       clickable: true,
+//     },
+//     autoplay: {
+//       delay: 40000000, // Auto-slide every 3 seconds
+//       disableOnInteraction: false,
+//     },
+//     breakpoints: {
+//       1024: { slidesPerView: 4 }, // Desktop: 3 slides
+//       768: { slidesPerView: 2 }, // Tablet: 2 slides
+//       480: { slidesPerView: 1 }, // Mobile: 1 slide
+//     },
+//   });
+// });
 
 // Tap Menu -------------------------
 
-document.addEventListener("DOMContentLoaded", function () {
-  const tabButtons = document.querySelectorAll(".tab-btn");
-  const tabPanels = document.querySelectorAll(".tab-panel");
+// document.addEventListener("DOMContentLoaded", function () {
+//   const tabButtons = document.querySelectorAll(".tab-btn");
+//   const tabPanels = document.querySelectorAll(".tab-panel");
 
-  tabButtons.forEach((button) => {
-    button.addEventListener("click", function () {
-      // Remove "active" class from all buttons
-      tabButtons.forEach((btn) => btn.classList.remove("active"));
-      this.classList.add("active");
+//   tabButtons.forEach((button) => {
+//     button.addEventListener("click", function () {
+//       // Remove "active" class from all buttons
+//       tabButtons.forEach((btn) => btn.classList.remove("active"));
+//       this.classList.add("active");
 
-      // Hide all tab panels and show the selected one
-      tabPanels.forEach((panel) => panel.classList.remove("active"));
-      document.getElementById(this.dataset.tab).classList.add("active");
-    });
-  });
+//       // Hide all tab panels and show the selected one
+//       tabPanels.forEach((panel) => panel.classList.remove("active"));
+//       document.getElementById(this.dataset.tab).classList.add("active");
+//     });
+//   });
 
-  document.querySelector(".tab-btn .active")?.click();
-});
+//   document.querySelector(".tab-btn .active")?.click();
+// });
 
 //  blog section --------------------------
 
@@ -203,7 +247,8 @@ document.addEventListener("DOMContentLoaded", function () {
     breakpoints: {
       1024: { slidesPerView: 3 }, // Desktop: 3 slides
       768: { slidesPerView: 2 }, // Tablet: 2 slides
-      480: { slidesPerView: 1 }, // Mobile: 1 slide
+      480: { slidesPerView: 1 },
+      0: { slidesPerView: 1 },// Mobile: 1 slide
     },
   });
 });

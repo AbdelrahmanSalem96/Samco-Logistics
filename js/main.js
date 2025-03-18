@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
       clickable: true,
     },
     autoplay: {
-      delay: 4000000, // Auto-slide every 3 seconds
+      delay: 4000, // Auto-slide every 3 seconds
       disableOnInteraction: false,
     },
     breakpoints: {

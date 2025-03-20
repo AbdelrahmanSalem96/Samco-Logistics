@@ -33,7 +33,7 @@
     display: block;
     font-size: 6rem;
     font-weight: 400;
-    letter-spacing: 3.5rem;
+    letter-spacing: 1rem;
     animation-name: moveInLeft;
     animation-duration: 1s;
     animation-timing-function: ease-out; }
@@ -41,7 +41,7 @@
     display: block;
     font-size: 2rem;
     font-weight: 700;
-    letter-spacing: 1.75rem;
+    letter-spacing: .5rem;
     animation: moveInRight 1s ease-out; }
 
 .heading-secondary {
@@ -268,6 +268,19 @@ body {
     color: #4d494a;
     margin: 1rem;
     letter-spacing: 0.3rem; }
+  .navigation__lang {
+    display: none; }
+    .navigation__lang .lang-btn {
+      background-color: #e06d2f;
+      color: #fff;
+      border: none;
+      padding: 8px 15px;
+      font-size: 14px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s; }
+      .navigation__lang .lang-btn:hover {
+        background-color: #bf561d; }
   .navigation__list {
     list-style: none;
     display: flex;
@@ -277,8 +290,7 @@ body {
     @media (max-width: 768px) {
       .navigation__list {
         position: absolute;
-        display: flex;
-        width: 0%;
+        width: 100%;
         top: 60px;
         right: 0;
         flex-direction: column;
@@ -289,8 +301,7 @@ body {
         padding: 1rem 0;
         z-index: 9999; }
         .navigation__list.active {
-          transform: translateX(0);
-          width: 100%; } }
+          transform: translateX(0); } }
   .navigation__item {
     margin-left: 3rem; }
     @media (max-width: 768px) {
@@ -536,23 +547,25 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-items: start;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    height: 100%; }
     .section-about .about__content--left {
       width: 40%; }
     .section-about .about__content--right {
       width: 45%; }
       .section-about .about__content--right .composition {
-        height: 90%;
-        position: relative; }
+        position: relative;
+        height: 100%; }
         .section-about .about__content--right .composition__photo {
           width: 55%;
           border-radius: 1rem;
           padding: 0.6rem;
-          height: 80vh;
           object-fit: cover; }
+          .section-about .about__content--right .composition__photo--p1 {
+            height: 94vh; }
           .section-about .about__content--right .composition__photo--p2, .section-about .about__content--right .composition__photo--p3 {
             width: 100%;
-            height: 40vh; }
+            height: 47vh; }
   .section-about .more-about {
     display: flex;
     justify-content: space-between; }
@@ -564,12 +577,16 @@ body {
       height: 70%; }
     .section-about .more-about .signature__img {
       height: 60%; }
-  .section-about .story {
-    border-radius: 3px;
-    font-size: 1.3rem;
-    display: flex; }
-    .section-about .story__img {
-      height: 50%; }
+  .section-about .stories {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+    .section-about .stories .story {
+      border-radius: 3px;
+      font-size: 1.3rem;
+      display: flex; }
+      .section-about .stories .story__img {
+        height: 50%; }
 
 /* Media Queries */
 @media (min-width: 992px) and (max-width: 1199px) {

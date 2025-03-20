@@ -257,38 +257,76 @@ body {
   text-align: right;
 }
 
-.whatsbut {
-  position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 40px;
-  right: 40px;
-  background-color: #25d366;
-  color: #fff;
-  border-radius: 50px;
-  text-align: center;
-  font-size: 30px;
-  box-shadow: 2px 2px 3px #999;
-  z-index: 100;
+.fixed-button{
+  position: relative;
+  width: 100%;
+  .whatsbut {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 999999999;
+  }
+  
+  .whatsbut2 {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    left: 40px;
+    background-color: $color-secondary;
+    color: $color-primary;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 999999999;
+  }
 }
 
-.whatsbut2 {
-  position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 40px;
-  left: 40px;
-  background-color: $color-secondary;
-  color: $color-primary;
-  border-radius: 50px;
-  text-align: center;
-  font-size: 30px;
-  box-shadow: 2px 2px 3px #999;
-  z-index: 100;
-}
 
 .my-whatsbut {
   margin-top: 16px;
+}
+
+@media (min-width:992px) and (max-width:1199px){
+
+}
+
+@media (min-width:768px) and (max-width:991px){
+  .fixed-button{
+    .whatsbut{
+      bottom: 110px;
+      left: 40px;
+    }
+  }
+}
+
+@media (max-width: 767px){
+  .fixed-button{
+
+    .my-whatsbut {
+      margin-top: 0px;
+    }
+
+    .whatsbut, .whatsbut2{
+      width: 30px;
+      height: 30px;
+      font-size: 20px;
+    }
+
+    .whatsbut{
+      bottom: 100px;
+      left: 40px;
+    }
+  }
 }
 
 // Nav
@@ -326,9 +364,11 @@ body {
 
     @media (max-width: 768px) {
       position: absolute;
+      display: flex;
+      width: 0%;
       top: 60px;
       right: 0;
-      width: 100%;
+     
       flex-direction: column;
       background-color: $color-secondary;
       text-align: center;
@@ -338,6 +378,7 @@ body {
       z-index: 9999;
       &.active {
         transform: translateX(0);
+        width: 100%;
       }
     }
   }
@@ -1326,7 +1367,7 @@ body {
             color: $color-secondary;
           }
         }
-        .select {
+        #comments {
           width: 100%;
           padding: 12px;
           border: none;
@@ -1337,7 +1378,7 @@ body {
 
       /* Form Fields */
       .input-group,
-      .select {
+      #comments {
         position: relative;
         margin: 10px 10px 15px 0;
       }
@@ -1381,7 +1422,7 @@ body {
         padding: 30px 0;
       }
 
-      .text-content{
+      .text-content {
         height: 40vh;
       }
     }
@@ -1430,7 +1471,7 @@ body {
               top: 50%;
             }
           }
-          .select {
+          #comments {
             width: 100%;
             padding: 12px;
             font-size: 1.2rem;
@@ -1464,7 +1505,7 @@ body {
       .quote-text {
         padding: 30px 0;
       }
-      .text-content{
+      .text-content {
         height: 55vh;
       }
     }
@@ -1513,7 +1554,7 @@ body {
               top: 50%;
             }
           }
-          .select {
+          #comments {
             width: 100%;
             padding: 12px;
             font-size: 1.2rem;
@@ -1597,7 +1638,7 @@ body {
               top: 50%;
             }
           }
-          .select {
+          #comments {
             width: 100%;
             padding: 12px;
             font-size: 1rem;
@@ -1653,12 +1694,12 @@ body {
       left: 20%;
       top: 35%;
       min-height: 40vh;
-  
+
       .swiper-slide {
         display: flex;
         justify-content: space-around;
         align-items: center;
-  
+
         .card {
           background: $color-white;
           min-height: 250px;
@@ -1720,7 +1761,6 @@ body {
         margin: -20px auto;
       }
     }
-  
   }
 }
 
@@ -1794,7 +1834,6 @@ body {
 }
 
 @media (max-width: 767px) {
-
   .testimonial-section {
     min-height: 60vh;
 
@@ -1906,8 +1945,9 @@ body {
       position: absolute;
       background-color: #fff;
       border-radius: 5px;
-      padding: 2rem;
-      width: 50%;
+      padding: 1.5rem;
+      min-height: 13rem;
+      width: 60%;
       top: 100%;
       left: 10%;
 
@@ -2686,7 +2726,7 @@ body {
     padding: 20px 15px;
     margin-top: 100px;
 
-    .blog-header {      
+    .blog-header {
       width: 100%;
 
       .category {
@@ -2705,12 +2745,12 @@ body {
       .swiper {
         width: 100%;
         padding: 50px 20px;
-  
+
         .swiper-slide {
           .blog-card {
             width: 90%;
             min-height: 335px;
-  
+
             .card-content {
               h3 {
                 font-size: 1.3rem;
@@ -2719,9 +2759,7 @@ body {
           }
         }
       }
-  
     }
-
   }
 }
 
@@ -2735,16 +2773,24 @@ body {
   );
 }
 
-$animationSpeed: 40s;
+$animationSpeed: 20s;
 
 // Animation
 @keyframes scroll {
   0% {
     transform: translateX(0);
-  }
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+}
   100% {
-    transform: translateX(calc(-250px * 7));
-  }
+    transform: translateX(calc(-150px * 7));
+    -webkit-transform: translateX(calc(-150px * 7));
+    -moz-transform: translateX(calc(-150px * 7));
+    -ms-transform: translateX(calc(-150px * 7));
+    -o-transform: translateX(calc(-150px * 7));
+}
 }
 
 .partener-section {
@@ -2773,46 +2819,42 @@ $animationSpeed: 40s;
     overflow: hidden;
     width: 80%;
 
-    // &::before,
-    // &::after {
-    //   @include white-gradient;
-    //   content: "";
-    //   height: 100px;
-    //   position: absolute;
-    //   width: 150px;
-    //   z-index: 2;
-    // }
-
-    &::after {
-      right: 0;
-      top: 0;
-      transform: rotateZ(180deg);
-    }
-
-    &::before {
-      left: 0;
-      top: 0;
-    }
-
-    .slide-track {
+    .slide-track1 {
       animation: scroll $animationSpeed linear infinite;
       display: flex;
-      width: calc(180px * 14);
+      width: calc(150px * 8);
+      -webkit-animation: scroll $animationSpeed linear infinite;
+    }
+
+    .slide-track2 {
+      animation: scroll $animationSpeed linear infinite;
+      display: flex;
+      width: calc(150px * 7);
+      -webkit-animation: scroll $animationSpeed linear infinite;
     }
 
     .slide {
       height: 100%;
-      width: 180px;
+      width: 150px;
       box-shadow: 10px 10px 20px -5px rgba(0, 0, 0, 0.125);
+      padding: 10px;
+      img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+      }
     }
   }
 }
 
-@media (min-width:992px) and (max-width:1199px){}
+@media (min-width: 992px) and (max-width: 1199px) {
+}
 
-@media (min-width:768px) and (max-width:991px){}
+@media (min-width: 768px) and (max-width: 991px) {
+}
 
-@media (max-width: 767px){}
+@media (max-width: 767px) {
+}
 
 // end of partener ---------------------------
 
@@ -2858,11 +2900,15 @@ $animationSpeed: 40s;
 
       input {
         width: 300px;
-        margin: 15px auto;
-        padding: 15px 10px;
+        margin: 15px 5px;
+        padding: 15px 1px;
         border: none;
-        border-radius: 5px 0 0 5px;
         outline: none;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
       }
 
       .subscribe-btn {
@@ -2870,10 +2916,13 @@ $animationSpeed: 40s;
         border: none;
         margin: 15px auto;
         padding: 15px;
-        border-radius: 0 5px 5px 0;
         cursor: pointer;
         font-weight: bold;
-
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
         i {
           margin-left: 5px;
         }
@@ -2888,7 +2937,7 @@ $animationSpeed: 40s;
   .footer-content {
     display: flex;
     justify-content: space-between;
-    text-align: left;
+    text-align: center;
     flex-wrap: wrap;
     width: 90%;
     margin: auto;
@@ -2939,6 +2988,17 @@ $animationSpeed: 40s;
       p {
         font-size: 14px;
         line-height: 1.8;
+
+        a {
+          text-decoration: none;
+          color: #ccc;
+          font-size: 16px;
+          transition: color 0.3s ease-in-out;
+
+          &:hover {
+            color: $color-primary; // Change color on hover
+          }
+        }
       }
 
       .social-icons {
@@ -3011,13 +3071,13 @@ $animationSpeed: 40s;
   }
 }
 
-@media (min-width:992px) and (max-width:1199px){
+@media (min-width: 992px) and (max-width: 1199px) {
   .footer {
     padding: 10px;
     margin: 0 auto;
     text-align: center;
     width: 100%;
-  
+
     .newsletter {
       width: 100%;
       padding-bottom: 20px;
@@ -3034,7 +3094,7 @@ $animationSpeed: 40s;
           font-size: 2rem;
         }
       }
-  
+
       .newsletter-input {
         margin: 15px auto;
         width: 50%;
@@ -3044,7 +3104,7 @@ $animationSpeed: 40s;
           margin: 15px auto;
           padding: 15px 10px;
         }
-  
+
         .subscribe-btn {
           width: 40%;
           margin: 15px auto;
@@ -3052,21 +3112,21 @@ $animationSpeed: 40s;
         }
       }
     }
-  
+
     .footer-content {
       display: flex;
       justify-content: space-between;
       text-align: center;
       width: 100%;
       margin: 0 auto;
-  
+
       .footer-column {
         flex: 1;
         min-width: 200px;
         margin: 20px;
         padding: 0 20px;
-  
-        &:last-child{
+
+        &:last-child {
           min-width: 260px;
         }
 
@@ -3081,25 +3141,24 @@ $animationSpeed: 40s;
           display: grid;
           grid-template-columns: repeat(3, 1fr);
           gap: 5px;
-  
+
           img {
             width: 80px;
             height: 80px;
           }
         }
-
       }
     }
   }
 }
 
-@media (min-width:768px) and (max-width:991px){
+@media (min-width: 768px) and (max-width: 991px) {
   .footer {
     padding: 10px;
     margin: 0 auto;
     text-align: center;
     width: 100%;
-  
+
     .newsletter {
       width: 100%;
       padding-bottom: 20px;
@@ -3116,7 +3175,7 @@ $animationSpeed: 40s;
           font-size: 2rem;
         }
       }
-  
+
       .newsletter-input {
         margin: 15px auto;
         width: 70%;
@@ -3126,7 +3185,7 @@ $animationSpeed: 40s;
           margin: 15px auto;
           padding: 15px 10px;
         }
-  
+
         .subscribe-btn {
           width: 40%;
           margin: 15px auto;
@@ -3134,20 +3193,20 @@ $animationSpeed: 40s;
         }
       }
     }
-  
+
     .footer-content {
       display: flex;
       justify-content: space-between;
       text-align: center;
       width: 100%;
       margin: 0 auto;
-  
+
       .footer-column {
         flex: 1;
         min-width: 200px;
         margin: 20px;
         padding: 0 20px;
-  
+
         .social-icons {
           display: flex;
           text-align: center;
@@ -3159,25 +3218,24 @@ $animationSpeed: 40s;
           display: grid;
           grid-template-columns: repeat(6, 1fr);
           gap: 5px;
-  
+
           img {
             width: 80px;
             height: 80px;
           }
         }
-
       }
     }
   }
 }
 
-@media (max-width: 767px){
+@media (max-width: 767px) {
   .footer {
     padding: 10px;
     margin: 0 auto;
     text-align: center;
     width: 100%;
-  
+
     .newsletter {
       width: 100%;
       padding-bottom: 20px;
@@ -3194,7 +3252,7 @@ $animationSpeed: 40s;
           font-size: 2rem;
         }
       }
-  
+
       .newsletter-input {
         margin: 15px auto;
         width: 90%;
@@ -3204,7 +3262,7 @@ $animationSpeed: 40s;
           margin: 15px auto;
           padding: 15px 10px;
         }
-  
+
         .subscribe-btn {
           width: 40%;
           margin: 15px auto;
@@ -3212,27 +3270,26 @@ $animationSpeed: 40s;
         }
       }
     }
-  
+
     .footer-content {
       display: flex;
       justify-content: space-between;
       text-align: center;
       width: 100%;
       margin: 0 auto;
-  
+
       .footer-column {
         flex: 1;
         min-width: 200px;
         margin: 20px;
         padding: 0 20px;
-  
+
         .social-icons {
           display: flex;
           text-align: center;
           gap: 10px;
           margin-top: 1rem;
         }
-
       }
     }
   }

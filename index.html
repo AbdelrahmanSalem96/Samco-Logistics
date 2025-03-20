@@ -65,13 +65,15 @@
     </div>
 
     <!-- fixed buttons -->
-    <a href="https://wa.me/+966545549725?text=chat with us" class="whatsbut" target="_blank">
-        <i class="fab fa-whatsapp my-whatsbut"></i>
-    </a>
-
-    <a href="tel:545549725" class="whatsbut2">
-        <i class="fa fa-phone my-whatsbut"></i>
-    </a>
+    <div class="fixed-button">
+        <a href="https://wa.me/+966545549725?text=chat with us" class="whatsbut" target="_blank">
+            <i class="fab fa-whatsapp my-whatsbut"></i>
+        </a>
+    
+        <a href="tel:545549725" class="whatsbut2">
+            <i class="fa fa-phone my-whatsbut"></i>
+        </a>
+    </div>
 
 
     <!-- Header -->
@@ -195,7 +197,7 @@
                             <div class="content">
                                 <h3 data-key="isoTitle">ISO Certificates</h3>
                                 <p data-key="isoDescription">International Organization for Standardization (ISO).</p>
-                                <a href="#" data-key="readMore">READ MORE →</a>
+                                <a href="javascript:void(0);" data-key="readMore">READ MORE →</a>
                             </div>
                         </div>
                     </div>
@@ -205,8 +207,8 @@
                             <img src="./img/our-service-3.jpg" alt="SFDA">
                             <div class="content">
                                 <h3 data-key="sfdaTitle">SFDA Certificates</h3>
-                                <p data-key="sfdaDescription">For importing food, pharmaceuticals, medical devices,</p>
-                                <a href="#" data-key="readMore">READ MORE →</a>
+                                <p data-key="sfdaDescription">For importing food, cosmetics, medical devices,</p>
+                                <a href="javascript:void(0);" data-key="readMore">READ MORE →</a>
                             </div>
                         </div>
                     </div>
@@ -218,7 +220,7 @@
                                 <h3 data-key="warehousingTitle">Warehousing</h3>
                                 <p data-key="warehousingDescription">18-25 C Temperature Controlled (Cosmetic-Medical
                                     Devices-Food).</p>
-                                <a href="#" data-key="readMore">READ MORE →</a>
+                                <a href="javascript:void(0);" data-key="readMore">READ MORE →</a>
                             </div>
                         </div>
                     </div>
@@ -229,7 +231,7 @@
                             <div class="content">
                                 <h3 data-key="ecommerceTitle">eCommerce Fulfillment</h3>
                                 <p data-key="ecommerceDescription">3PL Services Pick to Ship Flexible pricing.</p>
-                                <a href="#" data-key="readMore">READ MORE →</a>
+                                <a href="javascript:void(0);" data-key="readMore">READ MORE →</a>
                             </div>
                         </div>
                     </div>
@@ -239,9 +241,8 @@
                             <img src="./img/our-service-4.png" alt="SFDA">
                             <div class="content">
                                 <h3 data-key="sfdaReqTitle">SFDA Requirements</h3>
-                                <p data-key="sfdaReqDescription">Specific product or process, such as pharmaceutical
-                                    registration</p>
-                                <a href="#" data-key="readMore">READ MORE →</a>
+                                <p data-key="sfdaReqDescription">Registration of products with the Authority</p>
+                                <a href="javascript:void(0);" data-key="readMore">READ MORE →</a>
                             </div>
                         </div>
                     </div>
@@ -251,9 +252,9 @@
                             <img src="./img/our-service-6.jpg" alt="Custom">
                             <div class="content">
                                 <h3 data-key="customClearanceTitle">Custom Clearance</h3>
-                                <p data-key="customClearanceDescription">For importing food, pharmaceuticals, medical
+                                <p data-key="customClearanceDescription">For importing food, cosmetics, medical
                                     devices,</p>
-                                <a href="#" data-key="readMore">READ MORE →</a>
+                                <a href="javascript:void(0);" data-key="readMore">READ MORE →</a>
                             </div>
                         </div>
                     </div>
@@ -292,44 +293,29 @@
                 </div>
 
                 <!-- Tab Content -->
-                <form class="tab-content">
+                <form class="tab-content" method="post" id="myForm" name="myForm" onsubmit="return validateForm()">
                     <!-- Quote Form -->
                     <div id="quote" class="tab-panel active">
                         <div class="quote-group">
                             <div class="input-group">
-                                <input type="text" name="fullName" placeholder="Full Name"
-                                    data-key="placeholderFullName" required>
-                                <span class="icon">👤</span>
+                                <input type="text" id="name" name="fullName" placeholder="Full Name"
+                                    data-key="placeholderFullName">
                             </div>
                             <div class="input-group">
-                                <input type="email" name="email" placeholder="Your Email" data-key="placeholderEmail"
-                                    required>
-                                <span class="icon">✉️</span>
+                                <input type="email" id="email" name="email" placeholder="Your Email" data-key="placeholderEmail"
+                                >
+                            </div>
+                            <div class="input-group">
+                                <input name="subject" id="subject" class="form-control" data-key="placeholderSubject"
+                                                placeholder="Email Subject">
                             </div>
                         </div>
                         <div class="quote-group">
-                            <div class="input-group">
-                                <input type="text" name="weight" placeholder="Weight, Kg" data-key="placeholderWeight"
-                                    required>
-                                <span class="icon">⚖️</span>
-                            </div>
-                            <div class="input-group">
-                                <input type="text" name="distance" placeholder="Distance, Km"
-                                    data-key="placeholderDistance" required>
-                                <span class="icon">📍</span>
-                            </div>
+                            <textarea name="comments" id="comments" rows="4" class="form-control" data-key="message"
+                                        placeholder="Message :"></textarea>
                         </div>
-                        <div class="quote-group">
-                            <select name="freightOption" class="select" required>
-                                <option value="" data-key="selectOptionDefault">Select Option</option>
-                                <option value="freight1" data-key="selectFreight1">Select Freight 1</option>
-                                <option value="freight2" data-key="selectFreight2">Select Freight 2</option>
-                                <option value="freight3" data-key="selectFreight3">Select Freight 3</option>
-                                <option value="freight4" data-key="selectFreight4">Select Freight 4</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="submit-btn" data-key="freeQuote">FREE QUOTE! 🚀</button>
                     </div>
+                    <button type="button" id="submit" onclick="openMail()" name="send" class="submit-btn" data-key="freeQuote">FREE QUOTE! 🚀</button>
                 </form>
 
                 <!-- Tracking Form -->
@@ -496,7 +482,8 @@
                         </div>
                         <div class="portfolio__card--info">
                             <h5 data-key="oceanFreight">Processing orders</h5>
-                            <span data-key="distributionProcessing">The stored items or products are collected and then an order is created to prepare and process the orders.</span>
+                            <span data-key="distributionProcessing">Products are collected then
+                                an order is created to prepare and process the orders.</span>
                         </div>
                     </div>
 
@@ -633,8 +620,8 @@
                 <div class="hero-content">
                     <h1 data-key="support_text">24/7 customer support any time of the day or night</h1>
                     <div class="hero-buttons">
-                        <a href="#" class="btn btn-orange" data-key="free_quote">FREE QUOTE! 🚀</a>
-                        <a href="#" class="btn btn-blue" data-key="contact_us">CONTACT US →</a>
+                        <a href="#quote" class="btn btn-orange" data-key="free_quote">FREE QUOTE! 🚀</a>
+                        <a href="tel:507513164" class="btn btn-blue" data-key="contact_us">CONTACT US →</a>
                     </div>
                 </div>
             </div>
@@ -676,7 +663,7 @@
                     <span data-key="blog_label">📌 BLOG & NEWS</span>
                     <h2 data-key="blog_title">Latest Blog & News</h2>
                 </div>
-                <a href="#" class="btn-orange" data-key="view_all_posts">VIEW ALL POSTS →</a>
+                <a href="javascript:void(0);" class="btn-orange" data-key="view_all_posts">VIEW ALL POSTS →</a>
             </div>
 
             <div class="blog-carousel">
@@ -685,7 +672,7 @@
                         <!-- Slide 1 -->
                         <div class="swiper-slide">
                             <div class="blog-card">
-                                <img src="./img/blog-s-1-3.jpg" alt="Blog Image">
+                                <img src="./img/blog-s-1-3.jpeg" alt="Blog Image">
                                 <div class="date-badge" data-key="date_1">11 Apr</div>
                                 <div class="card-content">
                                     <div class="meta">
@@ -693,7 +680,7 @@
                                         <span data-key="comments_1">💬 Comments(3)</span>
                                     </div>
                                     <h3 data-key="blog_1_title">The perfect logistics partner for your business</h3>
-                                    <a href="#" class="read-more" data-key="read_more">READ MORE →</a>
+                                    <a href="javascript:void(0);" class="read-more" data-key="read_more">READ MORE →</a>
                                 </div>
                             </div>
                         </div>
@@ -701,7 +688,7 @@
                         <!-- Slide 3 -->
                         <div class="swiper-slide">
                             <div class="blog-card">
-                                <img src="./img/blog-s-1-4.jpg" alt="Blog Image">
+                                <img src="./img/logistics (1).jpg" alt="Blog Image">
                                 <div class="date-badge" data-key="date_3">11 Apr</div>
                                 <div class="card-content">
                                     <div class="meta">
@@ -709,7 +696,7 @@
                                         <span data-key="comments_3">💬 Comments(3)</span>
                                     </div>
                                     <h3 data-key="blog_3_title">Future Is Bright When You Are More Prepared</h3>
-                                    <a href="#" class="read-more" data-key="read_more">READ MORE →</a>
+                                    <a href="javascript:void(0);" class="read-more" data-key="read_more">READ MORE →</a>
                                 </div>
                             </div>
                         </div>
@@ -717,7 +704,7 @@
                         <!-- Slide 2 -->
                         <div class="swiper-slide">
                             <div class="blog-card">
-                                <img src="./img/blog-s-1-3.jpg" alt="Blog Image">
+                                <img src="./img/project_1_4.jpg" alt="Blog Image">
                                 <div class="date-badge" data-key="date_2">11 Apr</div>
                                 <div class="card-content">
                                     <div class="meta">
@@ -725,7 +712,7 @@
                                         <span data-key="comments_2">💬 Comments(3)</span>
                                     </div>
                                     <h3 data-key="blog_2_title">Moving your products across all borders.</h3>
-                                    <a href="#" class="read-more" data-key="read_more">READ MORE →</a>
+                                    <a href="javascript:void(0);" class="read-more" data-key="read_more">READ MORE →</a>
                                 </div>
                             </div>
                         </div>
@@ -741,7 +728,7 @@
                                         <span data-key="comments_4">💬 Comments(3)</span>
                                     </div>
                                     <h3 data-key="blog_4_title">Don't get stuck with the rest, truck with us!</h3>
-                                    <a href="#" class="read-more" data-key="read_more">READ MORE →</a>
+                                    <a href="javascript:void(0);" class="read-more" data-key="read_more">READ MORE →</a>
                                 </div>
                             </div>
                         </div>
@@ -763,8 +750,38 @@
                 <h2 data-key="ourPartners">Our Partners</h2>
             </div>
 
+            <div class="partners-slider u-margin-bottom-small">
+                <div class="slide-track1">
+                    <div class="slide">
+                        <img src="./img/blabn.svg" alt="blabn" />
+                    </div>
+                    <div class="slide">
+                        <img src="./img/wahmy.jpg" alt="wahmy" />
+                    </div>
+                    <div class="slide">
+                        <img src="./img/baheg.jpg" alt="baheg" />
+                    </div>
+                    <div class="slide">
+                        <img src="./img/konafah.jpg" alt="konafah" />
+                    </div>
+                    <div class="slide">
+                        <img src="./img/checken-Balalam.jpg" alt="checken Balalam" />
+                    </div>
+                    <div class="slide">
+                        <img src="./img/shaltat.jpg" alt="shaltat" />
+                    </div>
+                    <div class="slide">
+                        <img src="./img/primose.jpg" alt="primos-pizza" />
+                    </div>
+                    <div class="slide">
+                        <img src="./img/masry-asly.jpg" alt="masry-asly" />
+                    </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="partners-slider">
-                <div class="slide-track">
+                <div class="slide-track2">
                     <div class="slide">
                         <img src="./img/partener-1.jpg" alt="" />
                     </div>
@@ -772,43 +789,19 @@
                         <img src="./img/partener-2.jpg" alt="" />
                     </div>
                     <div class="slide">
-                        <img src="./img/partener-3.jpg" alt="" />
+                        <img src="./img/modern sama.jpg" alt="modern sama" />
                     </div>
                     <div class="slide">
-                        <img src="./img/partener-4.jpg" alt="" />
+                        <img src="./img/Medco.jpeg" alt="" />
                     </div>
                     <div class="slide">
-                        <img src="./img/partener-5.jpg" alt="" />
+                        <img src="./img/cure-health1.jpg" alt="" />
                     </div>
                     <div class="slide">
-                        <img src="./img/partener-6.jpg" alt="" />
+                        <img src="./img/innovative.png" alt="" />
                     </div>
                     <div class="slide">
-                        <img src="./img/partener-7.jpg" alt="" />
-                    </div>
-                    <div class="slide">
-                        <img src="./img/partener-8.jpg" alt="" />
-                    </div>
-                    <div class="slide">
-                        <img src="./img/partener-9.jpg" alt="" />
-                    </div>
-                    <div class="slide">
-                        <img src="./img/partener-10.jpg" alt="" />
-                    </div>
-                    <div class="slide">
-                        <img src="./img/partener-11.jpg" alt="" />
-                    </div>
-                    <div class="slide">
-                        <img src="./img/partener-12.jpg" alt="" />
-                    </div>
-                    <div class="slide">
-                        <img src="./img/partener-13.jpg" alt="" />
-                    </div>
-                    <div class="slide">
-                        <img src="./img/partener-14.jpg" alt="" />
-                    </div>
-                    <div class="slide">
-                        <img src="./img/partener-15.jpg" alt="" />
+                        <img src="./img/srabeel.jpg" alt="" />
                     </div>
                 </div>
             </div>
@@ -825,7 +818,7 @@
             </div>
             <div class="newsletter-input">
                 <input type="email" placeholder="Enter Your Email" data-key="newsletter_placeholder">
-                <button class="subscribe-btn" data-key="subscribe_button">
+                <button class="subscribe-btn" onclick="openMail()" data-key="subscribe_button">
                     Subscribe <i class="fa fa-paper-plane"></i>
                 </button>
             </div>
@@ -836,13 +829,12 @@
             <div class="footer-column">
                 <img src="./img/logo.png" alt="Company Logo" class="footer-logo">
                 <p data-key="company_description">
-                    Pellentesque non dolor vitae lacus fringilla consequat vel quis enim.
+                    World-Class Warehouse Services to Support Your Business Growth!
                 </p>
                 <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fa-brands fa-behance"></i></a>
+                    <a href="javascript:void(0);"><i class="fab fa-facebook-f"></i></a>
+                    <a href="javascript:void(0);"><i class="fab fa-twitter"></i></a>
+                    <a href="javascript:void(0);"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
 
@@ -850,11 +842,17 @@
             <div class="footer-column">
                 <h3 data-key="office_address">Office Address</h3>
                 <p data-key="office_location">7304 Sulay District, Riyadh, Saudi Arabia</p>
-                <p data-key="office_hours">Mon-Fri: 09.00 am-05.00 pm</p>
-                <p data-key="office_phone">+966 50 751 3164</p>
-                <p data-key="office_phone_2">+966545549725</p>
-                <p data-key="office_email">info@samco-ksa.com</p>
-                <p data-key="office_email_2">marketing@samco-ksa.com</p>
+                <p data-key="office_hours"> Sat - Thu 09:00 AM - 06:00 PM</p>
+                <p>
+                    <a href="tel:507513164" data-key="office_phone">+966 50 751 3164</a>
+                </p>
+                <p><a href="tel:545549725" data-key="office_phone_2">+966 545549725</a></p>
+                <p>
+                    <a data-key="office_email" href="mailto:info@samco-ksa.com">info@samco-ksa.com</a>
+                </p>
+                <p>
+                    <a data-key="office_email_2" href="mailto:marketing@samco-ksa.com">marketing@samco-ksa.com</a>
+                </p>
             </div>
 
             <!-- Explore Links -->
@@ -888,9 +886,9 @@
         <div class="footer-bottom">
             <p>All Rights Reserved © Designed by <span class="highlight">3b_d0 Salem</span></p>
             <div class="footer-links">
-                <a href="#">Privacy</a>
-                <a href="#">Terms & Condition</a>
-                <a href="#">About Me</a>
+                <a href="javascript:void(0);">Privacy</a>
+                <a href="javascript:void(0);">Terms & Condition</a>
+                <a href="javascript:void(0);">About Me</a>
             </div>
         </div>
     </footer>

@@ -65,7 +65,7 @@ const translations = {
     founderCEO: "Founder Of CEO",
     ourRecentWork: "Our Recent Work Showcase",
     oceanFreight: "Order processing",
-    distributionProcessing: "The stored items or products are collected and then an order is created to prepare and process the orders.",
+    distributionProcessing: "Products are collected and then an order is created to prepare and process the orders.",
     truckFreight: "Truck Freight",
     packagingDistribution: "Refrigerated and regular domestic shipping",
     airFreight: "Air Freight",
@@ -112,6 +112,7 @@ const translations = {
     dontGetStuck: "Don't get stuck with the rest, truck with us!",
     ourPartners: "Our Partners",
     subscribeNewsletter: "Subscribe Our Newsletter",
+    newsletter_placeholder:"Enter Your Email",
     getUpdate: "Get update",
     enterYourEmail: "Enter Your Email",
     subscribe: "Subscribe",
@@ -125,6 +126,10 @@ const translations = {
     privacyPolicy: "Privacy",
     termsCondition: "Terms & Condition",
     aboutMe: "About Me",
+    message:"Message :",
+    placeholderSubject:"Email Subject",
+    placeholderEmail:"Your Email",
+    placeholderFullName:"Full Name"
   },
   ar: {
     logo: "سامكو",
@@ -160,7 +165,7 @@ const translations = {
     isoTitle: "شهادات الأيزو",
     isoDescription: "المنظمة الدولية للتوحيد القياسي (ISO).",
     sfdaTitle: "شهادات هيئة الغذاء والدواء",
-    sfdaDescription: "لاستيراد الأغذية، والأدوية، والأجهزة الطبية،",
+    sfdaDescription: "لاستيراد الأغذية، ومستحضرات التجميل، والأجهزة الطبية،",
     warehousingTitle: "المستودعات",
     warehousingDescription:
       "درجة حرارة بين 18-25 درجة مئوية (مستحضرات التجميل - الأجهزة الطبية - الأغذية).",
@@ -168,9 +173,9 @@ const translations = {
     ecommerceDescription:
       "خدمات لوجستية للطرف الثالث 3PL، انتقاء للشحن، تسعير مرن.",
     sfdaReqTitle: "متطلبات هيئة الغذاء والدواء",
-    sfdaReqDescription: "منتج أو عملية محددة مثل تسجيل الأدوية",
+    sfdaReqDescription: "تسجيل المنتجات في الهيئة",
     customClearanceTitle: "التخليص الجمركي",
-    customClearanceDescription: "لاستيراد الأغذية، والأدوية، والأجهزة الطبية،",
+    customClearanceDescription: "لاستيراد الأغذية، ومستحضرات التجميل، والأجهزة الطبية،",
     readMore: "اقرأ المزيد →",
     ourServices: "خدماتنا",
     specialistLogisticsServices: "خدمات لوجستية متخصصة",
@@ -355,7 +360,7 @@ const translations = {
     newsletter_update: "احصل على التحديثات",
     newsletter_placeholder: "أدخل بريدك الإلكتروني",
     subscribe_button: "اشترك",
-    company_description: "بيللينتيسك غير مؤلم يعيش في الحياة الحدودية.",
+    company_description: "خدمات المستودعات العالمية لدعم نمو أعمالك!",
     social_facebook: "فيسبوك",
     social_twitter: "تويتر",
     social_linkedin: "لينكد إن",
@@ -394,6 +399,8 @@ const translations = {
     privacyPolicy: "سياسة الخصوصية",
     termsCondition: "الشروط والأحكام",
     aboutMe: "عنّي",
+    placeholderSubject:"الموضوع",
+    message:"الرسالة :"
   },
 };
 
@@ -411,4 +418,46 @@ function updateTextContent(lang) {
   if (emailInput) {
     emailInput.placeholder = translations[lang].newsletter_placeholder;
   }
+
+  const fullName = document.querySelector(
+    '[data-key="placeholderFullName"]'
+  );
+  if (fullName) {
+    fullName.placeholder = translations[lang].placeholderFullName;
+  }
+
+  const placeholderEmail = document.querySelector(
+    '[data-key="placeholderEmail"]'
+  );
+  if (placeholderEmail) {
+    placeholderEmail.placeholder = translations[lang].placeholderEmail;
+  }
+
+  const placeholderSubject = document.querySelector(
+    '[data-key="placeholderSubject"]'
+  );
+  if (placeholderSubject) {
+    placeholderSubject.placeholder = translations[lang].placeholderSubject;
+  }
+
+  const message = document.querySelector(
+    '[data-key="message"]'
+  );
+  if (message) {
+    message.placeholder = translations[lang].message;
+  }
+}
+
+function openMail() {
+  var name = document.getElementById("name");
+  var from = document.getElementById("email");
+  var subject = document.getElementById("subject");
+  var body = document.getElementById("comments");
+  var dd = body = emailBody(body.value, name.value, from.value)
+  window.open('mailto:info@samco-ksa.com?cc=marketing@samco-ksa.com&subject=' + subject.value + '&body=' + dd);
+}
+
+function emailBody(e, name, email) {
+  e += `%0A %0A best regards,%0A${name},%0A${email}`;
+  return e;
 }

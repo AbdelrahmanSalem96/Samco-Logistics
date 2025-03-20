@@ -2,25 +2,17 @@
 function toggleLanguage() {
   const langBtn = document.getElementById("langToggle");
   const currentLang = document.documentElement.lang;
-  // currentLang = "EN";
+
   if (currentLang === "ar") {
     document.documentElement.lang = "en";
     localStorage.setItem("lang", "en");
     langBtn.textContent = "عربي";
-    document
-      .getElementById("langToggle")
-      .addEventListener("click", function () {
-        updateNavigation("ar"); // Switch to Arabic
-      });
+    document.documentElement.classList.remove("rtl"); // Remove RTL class
   } else {
     document.documentElement.lang = "ar";
-    localStorage.setItem("lang", "ar"); // Save preference
-    langBtn.textContent = "عربي";
-    document
-      .getElementById("langToggle")
-      .addEventListener("click", function () {
-        updateNavigation("en"); // Switch to Arabic
-      });
+    localStorage.setItem("lang", "ar");
+    langBtn.textContent = "EN";
+    document.documentElement.classList.add("rtl"); // Add RTL class
   }
 
   location.reload(); // Reload to apply changes
@@ -34,19 +26,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const langBtn = document.getElementById("langToggle");
   langBtn.textContent = savedLang === "en" ? "عربي" : "EN";
 
-  // updateNavigation(savedLang);
+  if (savedLang === "ar") {
+    document.documentElement.classList.add("rtl"); // Apply RTL on Arabic
+  } else {
+    document.documentElement.classList.remove("rtl"); // Remove RTL on English
+  }
+
   updateTextContent(savedLang);
 });
 
-// toggle menu
-document.addEventListener("DOMContentLoaded", function () {
-  const toggleButton = document.getElementById("nav-toggle");
-  const navMenu = document.getElementById("nav-menu");
-
-  toggleButton.addEventListener("click", function () {
-    navMenu.classList.toggle("active");
-  });
-});
 
 // toggle read
 function toggleReadMore() {
@@ -241,7 +229,7 @@ document.addEventListener("DOMContentLoaded", function () {
       clickable: true,
     },
     autoplay: {
-      delay: 40000000, // Auto-slide every 3 seconds
+      delay: 4000, // Auto-slide every 3 seconds
       disableOnInteraction: false,
     },
     breakpoints: {

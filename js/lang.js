@@ -65,7 +65,8 @@ const translations = {
     founderCEO: "Founder Of CEO",
     ourRecentWork: "Our Recent Work Showcase",
     oceanFreight: "Order processing",
-    distributionProcessing: "Products are collected and then an order is created to prepare and process the orders.",
+    distributionProcessing:
+      "Products are collected and then an order is created to prepare and process the orders.",
     truckFreight: "Truck Freight",
     packagingDistribution: "Refrigerated and regular domestic shipping",
     airFreight: "Air Freight",
@@ -112,7 +113,7 @@ const translations = {
     dontGetStuck: "Don't get stuck with the rest, truck with us!",
     ourPartners: "Our Partners",
     subscribeNewsletter: "Subscribe Our Newsletter",
-    newsletter_placeholder:"Enter Your Email",
+    newsletter_placeholder: "Enter Your Email",
     getUpdate: "Get update",
     enterYourEmail: "Enter Your Email",
     subscribe: "Subscribe",
@@ -126,10 +127,10 @@ const translations = {
     privacyPolicy: "Privacy",
     termsCondition: "Terms & Condition",
     aboutMe: "About Me",
-    message:"Message :",
-    placeholderSubject:"Email Subject",
-    placeholderEmail:"Your Email",
-    placeholderFullName:"Full Name"
+    message: "Message :",
+    placeholderSubject: "Email Subject",
+    placeholderEmail: "Your Email",
+    placeholderFullName: "Full Name",
   },
   ar: {
     logo: "سامكو",
@@ -152,7 +153,8 @@ const translations = {
     professionalsWithDigitalTools: "المحترفون مع الأدوات الرقمية",
     digitalTransformation: "مع تحول سامكو الرقمي ومع الخبراء.",
     aboutUsTitle: "من نحن",
-    aboutUsDescription:"مرحباً بكم في سامكو، الحل الشامل لجميع احتياجاتكم من تخزين المستودعات. نتمتع بخبرة واسعة في تقديم خدمات تخزين ممتازة لضمان تخزين منتجاتكم بأمان. من التخزين إلى التوزيع، ندير جميع جوانب عمليات إدارة سلسلة التوريد الخاصة بكم. بصفتنا إحدى شركات التخزين الرائدة في المملكة العربية السعودية، فإن مستودعاتنا مرخصة من الهيئة العامة للغذاء والدواء (SFDA) لتخزين منتجات الجهات الخارجية للأنشطة التالية: الأغذية المجمدة - الأغذية المبردة - الأغذية الجافة - الأجهزة والمستلزمات الطبية - مستحضرات التجميل. تُخزن المنتجات في درجات الحرارة المناسبة لكل منتج: التخزين في المجمدات عند درجة حرارة -18 درجة مئوية. التخزين المبرد في درجات حرارة تتراوح بين 2 درجة مئوية و10 درجات مئوية. التخزين في درجة حرارة الغرفة بين 18 درجة مئوية و25 درجة مئوية.",
+    aboutUsDescription:
+      "مرحباً بكم في سامكو، الحل الشامل لجميع احتياجاتكم من تخزين المستودعات. نتمتع بخبرة واسعة في تقديم خدمات تخزين ممتازة لضمان تخزين منتجاتكم بأمان. من التخزين إلى التوزيع، ندير جميع جوانب عمليات إدارة سلسلة التوريد الخاصة بكم. بصفتنا إحدى شركات التخزين الرائدة في المملكة العربية السعودية، فإن مستودعاتنا مرخصة من الهيئة العامة للغذاء والدواء (SFDA) لتخزين منتجات الجهات الخارجية للأنشطة التالية: الأغذية المجمدة - الأغذية المبردة - الأغذية الجافة - الأجهزة والمستلزمات الطبية - مستحضرات التجميل. تُخزن المنتجات في درجات الحرارة المناسبة لكل منتج: التخزين في المجمدات عند درجة حرارة -18 درجة مئوية. التخزين المبرد في درجات حرارة تتراوح بين 2 درجة مئوية و10 درجات مئوية. التخزين في درجة حرارة الغرفة بين 18 درجة مئوية و25 درجة مئوية.",
     aboutUsHeading: "خدمات المستودعات العالمية لدعم نمو أعمالك!",
     learnMore: "المزيد →",
     potentialToGrow: "إمكانية النمو",
@@ -175,7 +177,8 @@ const translations = {
     sfdaReqTitle: "متطلبات هيئة الغذاء والدواء",
     sfdaReqDescription: "تسجيل المنتجات في الهيئة",
     customClearanceTitle: "التخليص الجمركي",
-    customClearanceDescription: "لاستيراد الأغذية، ومستحضرات التجميل، والأجهزة الطبية،",
+    customClearanceDescription:
+      "لاستيراد الأغذية، ومستحضرات التجميل، والأجهزة الطبية،",
     readMore: "اقرأ المزيد →",
     ourServices: "خدماتنا",
     specialistLogisticsServices: "خدمات لوجستية متخصصة",
@@ -256,7 +259,7 @@ const translations = {
     darleneRobertson: "دارلين روبرتسون",
     jacRobertson: "جاك روبرتسون",
     founderCEO: "المؤسس والرئيس التنفيذي",
-    portfolioTitle:"ملف الشركة",
+    portfolioTitle: "ملف الشركة",
     ourRecentWork: "أحدث أعمالنا",
     oceanFreight: "تجهيز الطلبيات",
     distributionProcessing: "تحضير وتجهيز الطلبات الخاصة.",
@@ -270,14 +273,17 @@ const translations = {
     workingProcess: "مراحل العمل",
     workingProcessServices: "مراحل العمل للخدمات",
     onlineQuote: "عرض سعر عبر الإنترنت",
-    onlineQuoteDetails:"عرض سعر عبر الإنترنت هو تقدير لتكلفة منتج أو خدمة تقدمها الشركة.",
+    onlineQuoteDetails:
+      "عرض سعر عبر الإنترنت هو تقدير لتكلفة منتج أو خدمة تقدمها الشركة.",
     pickingProduct: "اختيار المنتج",
-    pickingProductDetails: "اختيار المنتج يشير إلى انتقاء عنصر معين من بين مجموعة من المنتجات.",
+    pickingProductDetails:
+      "اختيار المنتج يشير إلى انتقاء عنصر معين من بين مجموعة من المنتجات.",
     productPackaging: "تغليف المنتج",
-    productPackagingDetails:"تغليف المنتج يشير إلى المواد والتصميم المستخدمين لحماية المنتجات للعملاء.",
+    productPackagingDetails:
+      "تغليف المنتج يشير إلى المواد والتصميم المستخدمين لحماية المنتجات للعملاء.",
     productTransport: "نقل المنتج",
-    productTransportDetails:"نقل المنتج يشير إلى نقل المنتجات من مكان إلى آخر.",
-
+    productTransportDetails:
+      "نقل المنتج يشير إلى نقل المنتجات من مكان إلى آخر.",
 
     experienceTeam: "فريق ذو خبرة",
     meetOurTeam: "تعرف على فريقنا المذهل",
@@ -300,8 +306,8 @@ const translations = {
     team_member_5_name: "رونالد ريتشاردز",
     team_member_5_position: "مدير أول",
 
-
-    support_text: "دعم العملاء على مدار الساعة طوال أيام الأسبوع في أي وقت من النهار أو الليل",
+    support_text:
+      "دعم العملاء على مدار الساعة طوال أيام الأسبوع في أي وقت من النهار أو الليل",
     free_quote: "احصل على عرض مجاني! 🚀",
     contact_us: "اتصل بنا →",
     clients_count: "15k",
@@ -312,7 +318,6 @@ const translations = {
     staff_text: "موظفو الشركة الخبراء",
     delivery_count: "15k",
     delivery_text: "توصيل ناجح",
-
 
     blog_label: "📌 المدونة والأخبار",
     blog_title: "أحدث المدونات والأخبار",
@@ -335,7 +340,6 @@ const translations = {
     blog_4_title: "لا تعلق مع البقية، انقل معنا!",
     read_more: "اقرأ المزيد →",
 
-
     customerSupport: "دعم العملاء ۲٤/۷ في أي وقت من اليوم أو الليل",
     clients: "العملاء",
     worldwideClients: "۱٥ ألف عميل حول العالم",
@@ -352,7 +356,7 @@ const translations = {
     movingProducts: "نقل منتجاتك عبر جميع الحدود.",
     futureIsBright: "المستقبل مشرق عندما تكون أكثر استعدادًا",
     dontGetStuck: "لا تبقَ عالقًا مع البقية، انطلق معنا!",
-    
+
     partners: "شركاؤنا",
     ourPartners: "أهم عملاؤنا",
 
@@ -384,7 +388,7 @@ const translations = {
     gallery_image_4: "صورة المعرض ٤",
     gallery_image_5: "صورة المعرض ٥",
     gallery_image_6: "صورة المعرض ٦",
-    
+
     subscribeNewsletter: "اشترك في نشرتنا الإخبارية",
     getUpdate: "احصل على التحديثات",
     enterYourEmail: "أدخل بريدك الإلكتروني",
@@ -399,8 +403,8 @@ const translations = {
     privacyPolicy: "سياسة الخصوصية",
     termsCondition: "الشروط والأحكام",
     aboutMe: "عنّي",
-    placeholderSubject:"الموضوع",
-    message:"الرسالة :"
+    placeholderSubject: "الموضوع",
+    message: "الرسالة :",
   },
 };
 
@@ -419,9 +423,7 @@ function updateTextContent(lang) {
     emailInput.placeholder = translations[lang].newsletter_placeholder;
   }
 
-  const fullName = document.querySelector(
-    '[data-key="placeholderFullName"]'
-  );
+  const fullName = document.querySelector('[data-key="placeholderFullName"]');
   if (fullName) {
     fullName.placeholder = translations[lang].placeholderFullName;
   }
@@ -440,9 +442,7 @@ function updateTextContent(lang) {
     placeholderSubject.placeholder = translations[lang].placeholderSubject;
   }
 
-  const message = document.querySelector(
-    '[data-key="message"]'
-  );
+  const message = document.querySelector('[data-key="message"]');
   if (message) {
     message.placeholder = translations[lang].message;
   }
@@ -453,11 +453,56 @@ function openMail() {
   var from = document.getElementById("email");
   var subject = document.getElementById("subject");
   var body = document.getElementById("comments");
-  var dd = body = emailBody(body.value, name.value, from.value)
-  window.open('mailto:info@samco-ksa.com?cc=marketing@samco-ksa.com&subject=' + subject.value + '&body=' + dd);
+  var dd = (body = emailBody(body.value, name.value, from.value));
+  window.open(
+    "mailto:info@samco-ksa.com?cc=marketing@samco-ksa.com&subject=" +
+      subject.value +
+      "&body=" +
+      dd
+  );
 }
 
 function emailBody(e, name, email) {
   e += `%0A %0A best regards,%0A${name},%0A${email}`;
   return e;
+}
+
+checkCookie();
+
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(";");
+  for (let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == " ") {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function checkCookie() {
+  let language = getCookie("lang");
+  if (language != "") {
+    if (language == 2) {
+      changeToAR();
+    } else {
+      changeToEN();
+    }
+  } else {
+    language = 1;
+    changeToEN();
+    setCookie("lang", language, 30);
+  }
+}
+
+function setCookie(cname, cvalue, exdays) {
+  const d = new Date();
+  d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
+  let expires = "expires=" + d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }

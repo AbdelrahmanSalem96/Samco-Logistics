@@ -240,3 +240,47 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 });
+
+
+// our partener
+
+document.addEventListener("DOMContentLoaded", function () {
+  new Swiper(".partenerSwiper", {
+    slidesPerView: 6, // Show 3 slides at a time
+    spaceBetween: 0, // Space between slides
+    loop: true, // Enable infinite loop
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    autoplay: {
+      delay: 4000, // Auto-slide every 3 seconds
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      1024: {
+        slidesPerView: 6,
+        spaceBetween: 5,
+      }, // Desktop: 3 slides
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 5,
+      }, // Tablet: 2 slides
+      480: {
+        slidesPerView: 3,
+        spaceBetween: 0,
+      },
+      0: {
+        slidesPerView: 2,
+        spaceBetween: 0,
+      }, // Mobile: 1 slide
+    },
+  });
+});
+
+
+

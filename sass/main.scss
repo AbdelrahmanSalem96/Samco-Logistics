@@ -300,14 +300,7 @@ body {
 
 }
 
-@media (min-width:768px) and (max-width:991px){
-  .fixed-button{
-    .whatsbut{
-      bottom: 110px;
-      left: 40px;
-    }
-  }
-}
+@media (min-width:768px) and (max-width:991px){}
 
 @media (max-width: 767px){
   .fixed-button{
@@ -317,15 +310,11 @@ body {
     }
 
     .whatsbut, .whatsbut2{
-      width: 30px;
-      height: 30px;
+      width: 35px;
+      height: 35px;
       font-size: 20px;
     }
 
-    .whatsbut{
-      bottom: 100px;
-      left: 40px;
-    }
   }
 }
 
@@ -374,7 +363,7 @@ body {
       transform: translateX(100%);
       transition: transform 0.4s ease-in-out;
       padding: 1rem 0;
-      z-index: 9999;
+      z-index: 999999999;
       &.active {
         transform: translateX(0);
       }
@@ -466,7 +455,7 @@ body {
   align-items: center;
   padding: 10px 50px;
   font-size: 14px;
-  z-index: 100000000000;
+  z-index: 99999999;
 
   .top-bar__info {
     display: flex;
@@ -605,8 +594,12 @@ body {
   .top-bar {
     display: flex;
 
+    &__lang{
+      display: block;
+    }
+
     &__info, &__contact{
-      display: none !;
+      display: none !important;
     }
   }
 }
@@ -2774,34 +2767,6 @@ body {
 
 // Section Partener----------------
 
-@mixin white-gradient {
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
-}
-
-$animationSpeed: 20s;
-
-// Animation
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -o-transform: translateX(0);
-}
-  100% {
-    transform: translateX(calc(-150px * 7));
-    -webkit-transform: translateX(calc(-150px * 7));
-    -moz-transform: translateX(calc(-150px * 7));
-    -ms-transform: translateX(calc(-150px * 7));
-    -o-transform: translateX(calc(-150px * 7));
-}
-}
-
 .partener-section {
   width: 100%;
   text-align: center;
@@ -2819,57 +2784,52 @@ $animationSpeed: 20s;
     }
   }
 
-  // Styling
-  .partners-slider {
-    background: $color-white;
-    box-shadow: 10px 10px 20px -5px rgba(0, 0, 0, 0.125);
-    height: 150px;
-    margin: auto;
-    overflow: hidden;
+  .partenerSwiper{
     width: 80%;
-
-    .slide-track1 {
-      animation: scroll $animationSpeed linear infinite;
-      display: flex;
-      width: calc(150px * 8);
-      -webkit-animation: scroll $animationSpeed linear infinite;
-    }
-
-    .slide-track2 {
-      animation: scroll $animationSpeed linear infinite;
-      display: flex;
-      width: calc(150px * 7);
-      -webkit-animation: scroll $animationSpeed linear infinite;
-    }
-
-    .slide {
-      height: 100%;
-      width: 150px;
-      box-shadow: 10px 10px 20px -5px rgba(0, 0, 0, 0.125);
-      padding: 10px;
-      img {
-        object-fit: cover;
-        height: 100%;
-        width: 100%;
+    margin: 0 auto;
+    
+    .swiper-wrapper{
+      margin-bottom: 6rem;
+      .carousel-item {
+        flex: 0 0 auto;
+        width: 120px;
+        height: 120px;
+        background: white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        
+        img {
+          width: 80%;
+          height: auto;
+          border-radius: 50%;
+        }
       }
     }
+
+    .swiper-pagination{
+      margin-top: 3rem !important;
+    }
   }
+  
+  
+   
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
-}
+@media (min-width: 992px) and (max-width: 1199px) {}
 
-@media (min-width: 768px) and (max-width: 991px) {
-}
+@media (min-width: 768px) and (max-width: 991px) {}
 
-@media (max-width: 767px) {
-}
+@media (max-width: 767px) {}
 
 // end of partener ---------------------------
 
 // footer ----------------
 .footer {
-  background: url(../img/footer_bg_2.JPG);
+  background: url(../img/footer_bg_4.jpg);
+  object-fit: cover;
   color: #fff;
   padding: 40px 80px;
   margin: 0 auto;

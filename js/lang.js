@@ -470,6 +470,15 @@ function updateTextContent(lang) {
   }
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.getElementById("nav-toggle");
+  const menu = document.getElementById("nav-menu");
+
+  toggle.addEventListener("click", function () {
+      menu.classList.toggle("active");
+  });
+});
+
 function openMail() {
   var name = document.getElementById("name");
   var from = document.getElementById("email");
@@ -488,6 +497,7 @@ function emailBody(e, name, email) {
   e += `%0A %0A best regards,%0A${name},%0A${email}`;
   return e;
 }
+
 
 checkCookie();
 

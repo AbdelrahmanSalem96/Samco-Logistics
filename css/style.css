@@ -53,7 +53,7 @@
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0rem;
   transition: all 0.2s; }
   .heading-secondary:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
@@ -68,7 +68,7 @@
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0rem;
   text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
 
 .heading-tertialry {
@@ -486,11 +486,11 @@ body {
       margin-bottom: 4rem; }
       .header .heading-primary--main {
         font-size: 3.5rem;
-        letter-spacing: 2rem;
+        letter-spacing: 0rem;
         margin-bottom: 1rem; }
       .header .heading-primary--sub {
         font-size: 1.6rem;
-        letter-spacing: 1.3rem; }
+        letter-spacing: 0rem; }
     .header .btn {
       padding: 1.5rem 2.5rem;
       font-size: 1.3rem; } }
@@ -511,12 +511,12 @@ body {
       margin-bottom: 4rem; }
       .header .heading-primary--main {
         font-size: 2.5rem;
-        letter-spacing: 1.5rem;
+        letter-spacing: 0rem;
         margin-bottom: 1rem; }
       .header .heading-primary--sub {
         font-size: 1.3rem;
         font-weight: 700;
-        letter-spacing: 1rem; }
+        letter-spacing: 0rem; }
     .header .btn {
       padding: 1rem 2rem;
       font-size: 1rem; } }

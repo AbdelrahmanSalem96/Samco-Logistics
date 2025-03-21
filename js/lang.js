@@ -156,7 +156,7 @@ const translations = {
     phoneNumber: "۹٦٦٥٤٥٥٤۹۷۲٥+",
     langButton: "العربية",
     warehouseServices: "خدمات المستودعات",
-    samcoFullName: "شركة السلامة للإنجازات الطبية (سامكو)",
+    samcoFullName: "شركة إنجاز للسلامة الطبية (سامكو)",
     worldClassWarehouse: "خدمات مستودعات عالمية لدعم نمو عملك!",
     learnMore: "اعرف المزيد →",
     potentialToGrow: "القدرة على النمو",
